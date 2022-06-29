@@ -20,6 +20,7 @@
       "~containers/*": ["containers/*"],
       "~components/*": ["components/*"],
       "~utils/*": ["utils/*"],
+      "~hooks/*": ["hooks/*"],
       "~pages/*": ["pages/*"],
       "~types/*": ["types/*"]
     }

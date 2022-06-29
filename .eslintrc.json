@@ -26,6 +26,12 @@
           "index", // <- index imports
           "unknown" // <- unknown
         ],
+        "pathGroups": [
+          {
+            "pattern": "~components/**",
+            "group": "internal"
+          }
+        ],
         "newlines-between": "always",
         "alphabetize": {
           /* sort in ascending order. Options: ["ignore", "asc", "desc"] */
