@@ -6,7 +6,7 @@
     "airbnb-typescript",
     "plugin:import/recommended",
     "plugin:import/typescript",
-    "next"
+    "next/core-web-vitals"
   ],
   "parserOptions": {
     "project": "./tsconfig.json"
@@ -26,12 +26,7 @@
           "index", // <- index imports
           "unknown" // <- unknown
         ],
-        "pathGroups": [
-          {
-            "pattern": "~components/**",
-            "group": "internal"
-          }
-        ],
+        "pathGroups": [{ "pattern": "~components/**", "group": "internal" }],
         "newlines-between": "always",
         "alphabetize": {
           /* sort in ascending order. Options: ["ignore", "asc", "desc"] */
