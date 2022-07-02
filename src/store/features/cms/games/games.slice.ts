@@ -9,7 +9,7 @@ export const gamesApi = cmsApi.injectEndpoints({
   endpoints: (build) => ({
     getGames: build.query<TGames, TGamesRequestParams>({
       query: () => `/games?${formatQueryString({
-        populate: '*',
+        populate: ['thumbnail', 'categories'],
         locale,
         filters: {
           new: {
