@@ -11,7 +11,8 @@ import styles from '../styles/Home.module.css';
 const Home: NextPage = () => {
   const { data: games, isLoading: isGamesLoading, error: gamesError } = useGetGamesQuery();
 
-  console.log('games', games);
+  console.log('games', games?.data);
+  console.log('error', gamesError);
 
   return (
     <div className={styles.container}>
@@ -29,10 +30,13 @@ const Home: NextPage = () => {
         </h1>
 
         <ul>
-          { gamesError && <li>Error: {gamesError}</li> }
-          { isGamesLoading && <div>Loading...</div> }
-          <li>{games?.meta?.pagination?.total} Results</li>
-          {games?.data && games?.data.map((game) => <li key={game.id}>{game.name}</li>)}
+          {gamesError && <li>Error: {gamesError?.data?.error?.message}</li>}
+          {isGamesLoading && <div>Loading...</div>}
+          <li>{games && games?.meta?.pagination?.total} Results</li>
+          {games && games?.data && games?.data?.map((game) => {
+            console.log('**game', game);
+            return <li key={game.id}>{game.name}</li>;
+          })}
         </ul>
 
         <p className={styles.description}>
