@@ -9,7 +9,7 @@ import { useGetGamesQuery } from '~store/features/cms/games';
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
-  const { data: games } = useGetGamesQuery({});
+  const { data: games } = useGetGamesQuery();
 
   console.log('games', games);
 
