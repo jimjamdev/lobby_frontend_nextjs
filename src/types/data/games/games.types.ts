@@ -1,4 +1,14 @@
-import { TGameResponse, TGamesResponse } from '~types/data/games/games-response.types';
+import { TMeta } from '~types/data';
+import { TDefaultRecord } from '~types/data/common';
 
-export type TGames = TGamesResponse;
-export type TGame = TGameResponse;
+export type TGames = {
+  data?: Array<TGame>;
+  meta?: TMeta;
+};
+
+export type TGame = TDefaultRecord & {
+  id: string;
+  name: string;
+  description: string;
+  locale: string;
+};

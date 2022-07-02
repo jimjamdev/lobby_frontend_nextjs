@@ -9,7 +9,7 @@ import { useGetGamesQuery } from '~store/features/cms/games';
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
-  const { data: games } = useGetGamesQuery();
+  const { data: games, isLoading: isGamesLoading, error: gamesError } = useGetGamesQuery();
 
   console.log('games', games);
 
@@ -26,8 +26,14 @@ const Home: NextPage = () => {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
           <Button>test button</Button>
           <Card>Hello card</Card>
-          {games && JSON.stringify(games)}
         </h1>
+
+        <ul>
+          { gamesError && <li>Error: {gamesError}</li> }
+          { isGamesLoading && <div>Loading...</div> }
+          <li>{games?.meta?.pagination?.total} Results</li>
+          {games?.data && games?.data.map((game) => <li key={game.id}>{game.name}</li>)}
+        </ul>
 
         <p className={styles.description}>
           Get started by editing <code className={styles.code}>pages/index.tsx</code>

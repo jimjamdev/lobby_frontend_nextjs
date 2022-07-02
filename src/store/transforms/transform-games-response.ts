@@ -1,7 +1,11 @@
-import { TGameResponse, TGamesResponse } from '~types/data';
+import { TGames, TGamesResponse } from '~types/data';
 
-export const transformGamesResponse = (response?: TGamesResponse) => response?.data?.map(
-  (game: TGameResponse) => ({
+export const transformGamesResponse = (response?: TGamesResponse): TGames => {
+  const games = response?.data?.map((game) => ({
     ...game,
-  }),
-);
+  }));
+  return {
+    data: games,
+    meta: response?.meta,
+  };
+};

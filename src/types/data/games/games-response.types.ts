@@ -1,16 +1,14 @@
 import { TMeta } from '~types/data';
+import { TDefaultRecord } from '~types/data/common';
 
 export type TGamesResponse = {
-  data: [TGameResponse];
-  meta: TMeta;
+  data?: Array<TGameResponse>;
+  meta?: TMeta;
 };
 
-export type TGameResponse = {
+export type TGameResponse = TDefaultRecord & {
   id: string;
   name: string;
   description: string;
-  createdAt: Date;
-  updatedAt: Date;
-  publishedAt: Date;
   locale: string;
 };
