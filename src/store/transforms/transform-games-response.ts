@@ -1,4 +1,5 @@
-export const transformGamesResponse = (response = []) => response?.data?.map((game: any) => ({
+import { TGames } from '~types/data';
+
+export const transformGamesResponse = (response: TGames) => response?.data?.map((game: any) => ({
   ...game,
-  image: game?.image?.url,
 }));
