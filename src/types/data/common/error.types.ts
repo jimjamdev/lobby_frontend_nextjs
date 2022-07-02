@@ -1,6 +1,7 @@
 export type TError = {
-  data: {
-    error: {
+  data?: {
+    status?: number;
+    error?: {
       message?: string;
       name?: string;
       status?: number;

@@ -13,6 +13,8 @@ const Home: NextPage = () => {
 
   console.log('games', games?.data);
   console.log('error', gamesError);
+  const [one = {}, two = {}, three = {}] = games?.data || [];
+  console.log('one', one, 'two', two, 'three', three);
 
   return (
     <div className={styles.container}>
