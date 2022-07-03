@@ -1,7 +1,7 @@
 const theme: any = {};
 
 theme.colors = {
-  primary: '#0070f3',
+  primary: 'pink',
 };
 
 theme.buttons = {
@@ -18,6 +18,14 @@ theme.buttons = {
     '&:hover': {
       background: 'orange',
     },
+  },
+  'primary-outline': {
+    color: theme.colors.primary,
+    backgroundColor: 'white',
+    borderWidth: '5px',
+    borderStyle: 'solid',
+    borderRadius: '500rem',
+    borderColor: theme.colors.primary,
   },
 };
 

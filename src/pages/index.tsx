@@ -26,8 +26,8 @@ const Home: NextPage = () => {
       </Head>
 
       <div>
-        <Button colour="primary" onClick={() => alert('Clicked')}>primary button</Button>
-        <Button colour="secondary">secondary button</Button>
+        <Button variant="primary-outline" m={[1, 2, 4]} onClick={() => alert('Clicked')}>primary button</Button>
+        <Button variant="secondary">secondary button</Button>
         <Card>Hello card</Card>
       </div>
 

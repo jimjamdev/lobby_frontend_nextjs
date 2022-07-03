@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 
 import { store } from '~store/store';
 import GlobalStyle from '~styles/globals';
-import { defaultTheme } from '~styles/theme/default-theme';
+import { defaultTheme } from '~styles/theme/default-theme/default-theme';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
