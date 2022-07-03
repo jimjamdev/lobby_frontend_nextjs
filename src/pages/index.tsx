@@ -5,17 +5,12 @@ import { Button } from '~components/atoms/Button';
 import { Card } from '~components/molecules/Card';
 import { useGetGamesQuery } from '~store/features/cms/games';
 
+// eslint-disable-next-line react/function-component-definition
 const Home: NextPage = () => {
   const {
     data: games,
     isLoading: isGamesLoading,
-    error: gamesError,
   } = useGetGamesQuery({ page: 1 });
-
-  console.log('games', games?.data);
-  console.log('error', gamesError);
-  const [one = {}, two = {}, three = {}] = games?.data || [];
-  console.log('one', one, 'two', two, 'three', three);
 
   return (
     <div>
@@ -26,14 +21,17 @@ const Home: NextPage = () => {
       </Head>
 
       <div>
-        <Button variant="primary" m={[1, 2, 4]} onClick={() => alert('Clicked')}>primary button</Button>
+        <Button variant="primary" size="xl" onClick={() => alert('Clicked')}>Play Now</Button>
+        <Button variant="primary" size="lg" onClick={() => alert('Clicked')}>Play Now</Button>
+        <Button variant="primary" size="md" onClick={() => alert('Clicked')}>Play Now</Button>
+        <Button variant="primary" size="sm" onClick={() => alert('Clicked')}>Play Now</Button>
+        <Button variant="primary" size="xs" onClick={() => alert('Clicked')}>Play Now</Button>
         <Button variant="secondary">secondary button</Button>
         <Button variant="primary-outline">primary outline</Button>
         <Card>Hello card</Card>
       </div>
 
       <ul>
-        {gamesError && <li>Error: {gamesError?.data?.error?.message}</li>}
         {isGamesLoading && <div>Loading...</div>}
         <li>{games && games?.meta?.pagination?.total} Results</li>
         {games?.data
