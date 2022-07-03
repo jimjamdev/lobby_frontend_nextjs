@@ -1,3 +1,3 @@
-import { ColorProps } from 'styled-system';
-
-export type TButton = ColorProps;
+export type TButton = {
+  colour?: 'primary' | 'secondary';
+};

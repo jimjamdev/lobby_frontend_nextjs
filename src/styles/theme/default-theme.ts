@@ -8,10 +8,16 @@ theme.buttons = {
   primary: {
     color: theme.colors.primary,
     backgroundColor: 'blue',
+    '&:hover': {
+      background: 'pink',
+    },
   },
   secondary: {
     color: 'green',
     backgroundColor: 'yellow',
+    '&:hover': {
+      background: 'orange',
+    },
   },
 };
 

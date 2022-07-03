@@ -7,7 +7,7 @@ export const Button = styled('button')<TButton>`
   border: 0 none;
   ${(
     variant({
-      prop: 'color',
+      prop: 'colour',
       scale: 'buttons',
     })
   )};
