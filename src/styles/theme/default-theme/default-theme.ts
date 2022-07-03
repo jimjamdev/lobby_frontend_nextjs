@@ -29,4 +29,12 @@ theme.buttons = {
   },
 };
 
+theme.buttonSizes = {
+  md: {
+    fontSize: '16px',
+    padding: '5px 10px',
+    minWidth: '100px',
+  },
+};
+
 export { theme as defaultTheme };

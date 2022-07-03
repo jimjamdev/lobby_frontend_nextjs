@@ -14,4 +14,14 @@ export const Button = styled('button')<TButton>`
       scale: 'buttons',
     })
   )};
+  ${(
+    variant({
+      prop: 'size',
+      scale: 'buttonSizes',
+    })
+  )};
 `;
+
+Button.defaultProps = {
+  size: 'md',
+};
