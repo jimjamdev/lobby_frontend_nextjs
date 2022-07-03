@@ -1,1 +1,5 @@
-export type TGamesRequestParams = void;
+export type TGamesRequestParams = {
+  pageSize?: number;
+  page?:number;
+
+};

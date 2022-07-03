@@ -6,7 +6,6 @@ import { config } from 'config';
 import { prepareCmsHeaders } from '~store/utils/prepare-cms-headers';
 import { TError } from '~types/data/common';
 
-// import { IMessage, IMessagesResponse } from '~types';
 export const cmsApi = createApi({
   reducerPath: 'cms',
   tagTypes: ['Cms'],

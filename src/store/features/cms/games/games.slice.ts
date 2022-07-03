@@ -8,7 +8,7 @@ const locale = 'en';
 export const gamesApi = cmsApi.injectEndpoints({
   endpoints: (build) => ({
     getGames: build.query<TGames, TGamesRequestParams>({
-      query: () => `/games?${formatQueryString({
+      query: ({ pageSize = 20, page = 1 }) => `/games?${formatQueryString({
         populate: ['thumbnail', 'categories'],
         locale,
         filters: {
@@ -17,7 +17,7 @@ export const gamesApi = cmsApi.injectEndpoints({
           },
         },
         pagination: {
-          pageSize: 20, page: 1, withCount: true,
+          pageSize, page, withCount: true,
         },
         sort: ['publishedAt:asc'],
       })}`,
