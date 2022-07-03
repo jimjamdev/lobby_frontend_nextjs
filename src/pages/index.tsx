@@ -25,17 +25,17 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <p>
-        <Button>test button</Button>
+      <div>
+        <Button color="primary">primary button</Button>
+        <Button color="secondary">secondary button</Button>
         <Card>Hello card</Card>
-      </p>
+      </div>
 
       <ul>
         {gamesError && <li>Error: {gamesError?.data?.error?.message}</li>}
         {isGamesLoading && <div>Loading...</div>}
         <li>{games && games?.meta?.pagination?.total} Results</li>
-        {games
-          && games?.data
+        {games?.data
           && games?.data?.map((game) => {
             console.log('**game', game);
             return <li key={game.id}>{game.name}</li>;

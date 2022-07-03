@@ -1,7 +1,14 @@
-import { TBaseComponentWithChildren } from '~types/base-component.type';
+import styled from 'styled-components';
+import { variant } from 'styled-system';
 
-export type TButton = TBaseComponentWithChildren;
+import { TButton } from './Button.types';
 
-export function Button({ children }: TButton) {
-  return <button type="button">{children}</button>;
-}
+export const Button = styled('button')<TButton>`
+  border: 0 none;
+  ${(
+    variant({
+      prop: 'color',
+      scale: 'buttons',
+    })
+  )};
+`;
