@@ -21,6 +21,9 @@ export default {
       options: ['xs', 'sm', 'md', 'lg', 'xl'],
       control: { type: 'select' },
     },
+    disabled: {
+      control: { type: 'boolean' },
+    },
   },
 } as ComponentMeta<typeof Button>;
 
@@ -28,5 +31,5 @@ export default {
 // eslint-disable-next-line react/function-component-definition
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args}>Button</Button>;
 
-export const Component = Template.bind({});
-Component.args = { variant: 'primary', size: 'md' };
+export const Index = Template.bind({});
+Index.args = { variant: 'primary', size: 'md' };
