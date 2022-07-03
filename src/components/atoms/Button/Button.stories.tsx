@@ -12,10 +12,21 @@ export default {
   */
   title: 'Button',
   component: Button,
+  argTypes: {
+    variant: {
+      options: ['primary', 'secondary', 'alternative'],
+      control: { type: 'select' },
+    },
+    size: {
+      options: ['xs', 'sm', 'md', 'lg', 'xl'],
+      control: { type: 'select' },
+    },
+  },
 } as ComponentMeta<typeof Button>;
 
 // 👇 We create a “template” of how args map to rendering
+// eslint-disable-next-line react/function-component-definition
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args}>Button</Button>;
 
-export const Primary = Template.bind({});
-Primary.args = { variant: 'primary', size: 'md' };
+export const Component = Template.bind({});
+Component.args = { variant: 'primary', size: 'md' };
