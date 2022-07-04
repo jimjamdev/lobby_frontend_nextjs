@@ -1,5 +1,6 @@
 {
   "name": "lobby-frontend-nextjs",
+  "author": "Ian Jamieson",
   "version": "0.1.0",
   "private": true,
   "scripts": {

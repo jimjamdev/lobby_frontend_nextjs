@@ -22,11 +22,11 @@ const Home: NextPage = () => {
       </Head>
 
       <Layout as="section" display="flex">
-        <Button variant="primary" size={['xs', 'xl']} onClick={() => alert('Clicked')}>Play Now</Button>
+        <Button variant="primary" size="xl" width="1000px" p={2} onClick={() => alert('Clicked')}>Play Now</Button>
         <Button variant="primary" size="lg" onClick={() => alert('Clicked')}>Play Now</Button>
         <Button variant="primary" size="md" onClick={() => alert('Clicked')}>Play Now</Button>
         <Button variant="primary" size="sm" onClick={() => alert('Clicked')}>Play Now</Button>
-        <Button variant="primary" size="xs" onClick={() => alert('Clicked')}>Play Now</Button>
+        <Button variant="alternative" size="xs" onClick={() => alert('Clicked')}>Play Now</Button>
         <Button variant="secondary">secondary button</Button>
         <Button variant="primary-outline">primary outline</Button>
         <Card>Hello card</Card>

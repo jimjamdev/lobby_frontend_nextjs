@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {
-  variant, space, compose,
+  variant, space, layout,
 } from 'styled-system';
 
 import { TButton } from './Button.types';
@@ -11,7 +11,8 @@ export const Button = styled('button')<TButton>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  ${compose(space)};
+  vertical-align: middle;
+  cursor: pointer;
   ${(
     variant({
       scale: 'buttons',
@@ -23,8 +24,6 @@ export const Button = styled('button')<TButton>`
       scale: 'buttonSizes',
     })
   )};
+  ${space};
+  ${layout};
 `;
-
-Button.defaultProps = {
-  size: 'md',
-};
