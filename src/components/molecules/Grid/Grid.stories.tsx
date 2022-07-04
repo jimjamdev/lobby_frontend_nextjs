@@ -16,6 +16,9 @@ export default {
   component: Grid,
   storyName: 'Grid',
   argTypes: {
+    gridTemplateColumns: {
+      control: { type: 'text' },
+    },
     gridGap: {
       options: [1, 2, 3, 4, 5, 6],
       control: { type: 'select' },
@@ -44,9 +47,6 @@ export default {
       control: { type: 'text' },
     },
     gridTemplateRows: {
-      control: { type: 'text' },
-    },
-    gridTemplateColumns: {
       control: { type: 'text' },
     },
     gridTemplateAreas: {
@@ -83,4 +83,4 @@ const Template: ComponentStory<typeof Grid> = (args) => (
 );
 
 export const Index = Template.bind({});
-Index.args = { gridGap: 2, gridColumn: 'span 2', gridAutoRows: 'auto' };
+Index.args = { gridGap: 2, gridTemplateColumns: 'repeat(8, 1fr)', gridAutoRows: 'auto' };
