@@ -19,10 +19,21 @@ export function buttonsTheme({ colors } : { colors: any }) {
       },
     },
     secondary: {
-      color: 'green',
-      backgroundColor: 'yellow',
+      color: 'white',
+      backgroundColor: colors.secondary[5],
+      fontWeight: 700,
+      borderRadius: '500rem',
+      borderStyle: 'solid',
+      borderWidth: '5px',
+      borderColor: 'transparent',
       '&:hover': {
-        background: 'orange',
+        background: colors.secondary[4],
+      },
+      '&:focus': {
+        background: colors.secondary[4],
+      },
+      '&:active': {
+        background: colors.secondary[4],
       },
     },
     alternative: {
