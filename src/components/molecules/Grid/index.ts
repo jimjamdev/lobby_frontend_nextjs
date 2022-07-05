@@ -1,1 +1,1 @@
-export { Grid } from './Grid';
+export { GridView } from './GridView';

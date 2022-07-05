@@ -3,62 +3,33 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 
+import { GridView } from 'components/molecules/Grid/GridView';
 import { Box } from '~components/atoms/Box/Box';
-
-import { Grid } from './Grid';
 
 export default {
   /* 👇 The title prop is optional.
   * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
   * to learn how to generate automatic titles
   */
-  title: 'Design System/Molecules/Grid',
-  component: Grid,
-  storyName: 'Grid',
+  title: 'Design System/Molecules/GridView',
+  component: GridView,
+  storyName: 'GridView',
   argTypes: {
-    gridTemplateColumns: {
-      control: { type: 'text' },
+    columns: {
+      options: [[1, 2, 3], [2, 4, 6], 1, 2, 3, 4, 5, 6],
+      control: { type: 'select' },
     },
     gridGap: {
-      options: [1, 2, 3, 4, 5, 6],
+      options: [[1, 2, 3], [2, 4, 6], 1, 2, 3, 4, 5, 6],
       control: { type: 'select' },
-    },
-    gridRowGap: {
-      options: [1, 2, 3, 4, 5, 6],
-      control: { type: 'select' },
-    },
-    gridColumnGap: {
-      options: [1, 2, 3, 4, 5, 6],
-      control: { type: 'select' },
-    },
-    gridArea: {
-      control: { type: 'text' },
-    },
-    gridColumn: {
-      control: { type: 'text' },
-    },
-    gridAutoFlow: {
-      control: { type: 'text' },
-    },
-    gridAutoRows: {
-      control: { type: 'text' },
-    },
-    gridAutoColumns: {
-      control: { type: 'text' },
-    },
-    gridTemplateRows: {
-      control: { type: 'text' },
-    },
-    gridTemplateAreas: {
-      control: { type: 'text' },
     },
   },
-} as ComponentMeta<typeof Grid>;
+} as ComponentMeta<typeof GridView>;
 
 // 👇 We create a “template” of how args map to rendering
 // eslint-disable-next-line react/function-component-definition
-const Template: ComponentStory<typeof Grid> = (args) => (
-  <Grid {...args}>
+const Template: ComponentStory<typeof GridView> = (args) => (
+  <GridView {...args}>
     <Box p={2} bg="tomato">Item</Box>
     <Box p={2} bg="tomato">Item</Box>
     <Box p={2} bg="tomato">Item</Box>
@@ -79,8 +50,8 @@ const Template: ComponentStory<typeof Grid> = (args) => (
     <Box p={2} bg="tomato">Item</Box>
     <Box p={2} bg="tomato">Item</Box>
     <Box p={2} bg="tomato">Item</Box>
-  </Grid>
+  </GridView>
 );
 
 export const Index = Template.bind({});
-Index.args = { gridGap: 2, gridTemplateColumns: 'repeat(8, 1fr)', gridAutoRows: 'auto' };
+Index.args = { columns: [1, 4, 6, 8], gridGap: [2, 3, 4] };
