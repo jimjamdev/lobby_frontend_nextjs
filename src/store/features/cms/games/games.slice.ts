@@ -1,7 +1,8 @@
 import { cmsApi } from '~store/features/cms';
-import { transformGamesResponse } from '~store/transforms';
 import { TGames, TGamesRequestParams, TGamesResponse } from '~types/data';
 import { formatQueryString } from '~utils/formatQueryString';
+
+import { gamesTransform } from './games.transform';
 
 const locale = 'en';
 
@@ -21,7 +22,7 @@ export const gamesApi = cmsApi.injectEndpoints({
         },
         sort: ['publishedAt:asc'],
       })}`,
-      transformResponse: (response: TGamesResponse) => transformGamesResponse(response),
+      transformResponse: (response: TGamesResponse) => gamesTransform(response),
       providesTags: ['Cms'],
     }),
   }),
