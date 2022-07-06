@@ -3,10 +3,15 @@ import Head from 'next/head';
 import { DefaultLayout } from '~components/layouts/DefaultLayout';
 import { useGetGamesQuery } from '~store/features/cms/games';
 import { TPage } from '~types/page.types';
+import { handleError } from '~utils/handleError';
 
 // eslint-disable-next-line react/function-component-definition
 const Home: TPage = () => {
-  const { data: games, isLoading: isGamesLoading } = useGetGamesQuery({ page: 1 });
+  const {
+    data: games,
+    isLoading: isGamesLoading,
+    error: gamesError,
+  } = useGetGamesQuery({ page: 1 });
 
   return (
     <>
@@ -17,6 +22,7 @@ const Home: TPage = () => {
       </Head>
 
       <ul>
+        {gamesError && handleError(gamesError)}
         {isGamesLoading && <div>Loading...</div>}
         <li>{games && games?.meta?.pagination?.total} Results</li>
         {games?.data
