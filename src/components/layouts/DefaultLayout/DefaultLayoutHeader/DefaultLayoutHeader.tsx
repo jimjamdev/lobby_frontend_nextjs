@@ -1,12 +1,5 @@
-import styled from 'styled-components';
-import { compose, color, ColorProps } from 'styled-system';
-
-export const DefaultLayoutHeaderContainerStyle = styled.div<ColorProps>`
-  display: flex;
-  height: 60px;;
-  ${compose(color)};
-`;
+import { Box } from '~components/atoms/Box';
 
 export function DefaultLayoutHeader() {
-  return <DefaultLayoutHeaderContainerStyle bg="primary.5">Hello</DefaultLayoutHeaderContainerStyle>;
+  return <Box bg="primary.6" color="white" height="60px">Hello</Box>;
 }

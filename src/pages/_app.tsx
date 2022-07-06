@@ -15,12 +15,12 @@ export type TApp = AppProps & {
 export default function App({ Component, pageProps }: TApp) {
   const getLayout = Component.getLayout || ((page) => page);
 
-  return getLayout(
+  return (
     <Provider store={store}>
       <ThemeProvider theme={defaultTheme}>
         <GlobalStyle />
-        <Component {...pageProps} />
+        {getLayout(<Component {...pageProps} />)}
       </ThemeProvider>
-    </Provider>,
+    </Provider>
   );
 }

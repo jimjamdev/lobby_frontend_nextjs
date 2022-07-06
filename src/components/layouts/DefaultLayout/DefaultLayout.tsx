@@ -2,10 +2,6 @@ import { TDefaultLayout } from '~components/layouts/DefaultLayout/DefaultLayout.
 import { DefaultLayoutHeader } from '~components/layouts/DefaultLayout/DefaultLayoutHeader';
 import { DefaultTemplate } from '~components/templates/DefaultTemplate';
 
-function TestHeader() {
-  return <div>Header</div>;
-}
-
 function TestNav() {
   return <div>Nav</div>;
 }
