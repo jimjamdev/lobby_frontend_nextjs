@@ -26,10 +26,7 @@ const Home: TPage = () => {
         {isGamesLoading && <div>Loading...</div>}
         <li>{games && games?.meta?.pagination?.total} Results</li>
         {games?.data
-          && games?.data?.map((game) => {
-            console.log('**game', game);
-            return <li key={game.id}>{game.name}</li>;
-          })}
+          && games?.data?.map((game) => <li key={game.id}>{game.name}</li>)}
       </ul>
     </>
   );
