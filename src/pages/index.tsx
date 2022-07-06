@@ -23,7 +23,9 @@ const Home: TPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Portal isOpen><Box bg="tomato">yup</Box></Portal>
+      <Portal isOpen>
+        <Box bg="tomato" position="absolute" top="0">SOME PORTAL</Box>
+      </Portal>
 
       <ul>
         {gamesError && handleError(gamesError)}

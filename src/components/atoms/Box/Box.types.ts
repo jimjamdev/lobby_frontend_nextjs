@@ -1,5 +1,5 @@
 import {
-  BorderProps, ColorProps, LayoutProps, SpaceProps,
+  BorderProps, ColorProps, LayoutProps, PositionProps, SpaceProps,
 } from 'styled-system';
 
-export type TBox = ColorProps & SpaceProps & LayoutProps & BorderProps;
+export type TBox = ColorProps & SpaceProps & LayoutProps & BorderProps & PositionProps;
