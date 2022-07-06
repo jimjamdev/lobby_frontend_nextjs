@@ -1,7 +1,7 @@
-import { formatQueryString } from 'utils/format-query-string';
 import { cmsApi } from '~store/features/cms';
 import { transformGamesResponse } from '~store/transforms';
 import { TGames, TGamesRequestParams, TGamesResponse } from '~types/data';
+import { formatQueryString } from '~utils/formatQueryString';
 
 const locale = 'en';
 

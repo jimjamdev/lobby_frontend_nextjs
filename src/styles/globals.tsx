@@ -12,7 +12,8 @@ const GlobalStyle = createGlobalStyle`
   }
   
   #__next {
-    min-height: 100%;
+    display: contents;
+    height: 100%; // fallback for browsers that don't support display contents
   }
 `;
 

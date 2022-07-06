@@ -1,0 +1,1 @@
+export { DefaultTemplateFooter } from './DefaultTemplateFooter';

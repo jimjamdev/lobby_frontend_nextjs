@@ -1,0 +1,1 @@
+export { DefaultTemplateHeader } from './DefaultTemplateHeader';
