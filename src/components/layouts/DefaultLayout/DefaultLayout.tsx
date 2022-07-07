@@ -1,10 +1,8 @@
-import { TDefaultLayout } from '~components/layouts/DefaultLayout/DefaultLayout.types';
-import { DefaultLayoutHeader } from '~components/layouts/DefaultLayout/DefaultLayoutHeader';
 import { DefaultTemplate } from '~components/templates/DefaultTemplate';
 
-function TestNav() {
-  return <div>Nav</div>;
-}
+import { TDefaultLayout } from './DefaultLayout.types';
+import { DefaultLayoutHeader } from './DefaultLayoutHeader';
+import { DefaultLayoutNav } from './DefaultLayoutNav';
 
 function TestFooter() {
   return <div>Footer</div>;
@@ -18,7 +16,7 @@ export function DefaultLayout({ children }: TDefaultLayout) {
   return (
     <DefaultTemplate
       header={<DefaultLayoutHeader />}
-      topNav={<TestNav />}
+      topNav={<DefaultLayoutNav />}
       footer={<TestFooter />}
       mobileNav={<TestMobileNav />}
     >{children}
