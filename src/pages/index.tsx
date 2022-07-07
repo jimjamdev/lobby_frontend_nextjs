@@ -26,6 +26,9 @@ const Home: TPage = () => {
       <Portal isOpen>
         <Box bg="tomato" position="absolute" top="0">SOME PORTAL</Box>
       </Portal>
+      <Portal isOpen>
+        <Box bg="tomato" position="absolute" top="50px">SOME PORTAL 2</Box>
+      </Portal>
 
       <ul>
         {gamesError && handleError(gamesError)}
