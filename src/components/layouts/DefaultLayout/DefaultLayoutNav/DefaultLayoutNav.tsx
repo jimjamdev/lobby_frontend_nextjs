@@ -2,16 +2,16 @@ import { Box } from '~components/atoms/Box';
 
 export function DefaultLayoutNav() {
   return (
-    <Box display={['none', 'block']} height="40px" padding="0 2rem" position="relative">
+    <Box display={['none', 'block']} height="2.8em" padding="0 2rem" position="relative">
       <Box
         as="ul"
         display="flex"
         alignItems="center"
         borderBottomLeftRadius={12}
         borderBottomRightRadius={12}
-        maxWidth="900px"
+        maxWidth="60em"
         bg="primary.6"
-        height="40px"
+        height="2.8em"
         margin="0 auto"
         padding={0}
         position="sticky"
