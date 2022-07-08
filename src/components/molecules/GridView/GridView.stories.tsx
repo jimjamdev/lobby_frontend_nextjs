@@ -3,7 +3,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 
-import { GridView } from 'components/molecules/Grid/GridView';
+import { GridView } from 'components/molecules/GridView/GridView';
 import { Box } from '~components/atoms/Box/Box';
 
 export default {
