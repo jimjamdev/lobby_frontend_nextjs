@@ -23,8 +23,8 @@ export function DefaultTemplate({
       {header && <DefaultTemplateHeader>{header}</DefaultTemplateHeader>}
       {topNav && <DefaultTemplateNav>{topNav}</DefaultTemplateNav>}
       <DefaultTemplateContent>{children}</DefaultTemplateContent>
-      {mobileNav && <DefaultTemplateMobileNav>{mobileNav}</DefaultTemplateMobileNav>}
       {footer && <DefaultTemplateFooter>{footer}</DefaultTemplateFooter>}
+      {mobileNav && <DefaultTemplateMobileNav>{mobileNav}</DefaultTemplateMobileNav>}
     </DefaultTemplateContainer>
   );
 }

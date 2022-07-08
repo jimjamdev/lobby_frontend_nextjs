@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 import { Box } from '~components/atoms/Box';
+import { Container } from '~components/atoms/Container';
 import { Portal } from '~components/atoms/Portal/Portal';
 import { DefaultLayout } from '~components/layouts/DefaultLayout';
 import { useGetGamesQuery } from '~store/features/cms/games';
@@ -30,13 +31,16 @@ const Home: TPage = () => {
         <Box bg="tomato" position="absolute" top="50px">SOME PORTAL 2</Box>
       </Portal>
 
-      <ul>
-        {gamesError && handleError(gamesError)}
-        {isGamesLoading && <div>Loading...</div>}
-        <li>{games && games?.meta?.pagination?.total} Results</li>
-        {games?.data
-          && games?.data?.map((game) => <li key={game.id}>{game.name}</li>)}
-      </ul>
+      <Container as="section">
+        <ul>
+          {gamesError && handleError(gamesError)}
+          {isGamesLoading && <div>Loading...</div>}
+          <li>{games && games?.meta?.pagination?.total} Results</li>
+          {games?.data
+            && games?.data?.map((game) => <li key={game.id}>{game.name}</li>)}
+        </ul>
+      </Container>
+
     </>
   );
 };
