@@ -32,13 +32,13 @@ const Home: TPage = () => {
       </Portal>
 
       <Container as="section">
-        <ul>
-          {gamesError && handleError(gamesError)}
-          {isGamesLoading && <div>Loading...</div>}
-          <li>{games && games?.meta?.pagination?.total} Results</li>
+        {games && games?.meta?.pagination?.total} Results
+        {gamesError && handleError(gamesError)}
+        {isGamesLoading && <div>Loading...</div>}
+        <Box as="ul" padding={0} margin={0}>
           {games?.data
-            && games?.data?.map((game) => <li key={game.id}>{game.name}</li>)}
-        </ul>
+            && games?.data?.map((game) => <Box bg="secondary.4" as="li" margin="0" padding={3} key={game.id}>{game.name}</Box>)}
+        </Box>
       </Container>
 
     </>
