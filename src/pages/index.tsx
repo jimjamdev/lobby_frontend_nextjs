@@ -25,10 +25,10 @@ const Home: TPage = () => {
       </Head>
 
       <Portal isOpen>
-        <Box bg="tomato" position="absolute" top="0">SOME PORTAL</Box>
+        <Box bg="primary.4" position="absolute" top="5em">SOME PORTAL</Box>
       </Portal>
       <Portal isOpen>
-        <Box bg="tomato" position="absolute" top="50px">SOME PORTAL 2</Box>
+        <Box bg="primary.6" position="absolute" top="10em">SOME PORTAL 2</Box>
       </Portal>
 
       <Container as="section">
