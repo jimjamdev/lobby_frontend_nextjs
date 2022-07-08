@@ -9,8 +9,8 @@ export function DefaultLayoutNav() {
           as="ul"
           display="flex"
           alignItems="center"
-          borderBottomLeftRadius={12}
-          borderBottomRightRadius={12}
+          borderBottomLeftRadius="md"
+          borderBottomRightRadius="md"
           maxWidth="60em"
           bg="primary.6"
           height="2.8em"
