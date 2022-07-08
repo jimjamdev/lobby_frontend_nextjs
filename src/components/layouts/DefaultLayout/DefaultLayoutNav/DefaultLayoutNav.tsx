@@ -2,7 +2,7 @@ import { Box } from '~components/atoms/Box';
 
 export function DefaultLayoutNav() {
   return (
-    <Box display={['none', 'block']} height="2.8em" padding="0 2rem" position="relative">
+    <Box id="top-menu" className="top-menu" display={['none', 'block']} height="2.8em" padding="0 2em" position="relative">
       <Box
         as="ul"
         display="flex"
