@@ -1,5 +1,6 @@
 import { Box } from '~components/atoms/Box';
 import { Container } from '~components/atoms/Container';
+import { Link } from '~components/atoms/Link';
 
 export function DefaultLayoutNav() {
   return (
@@ -20,7 +21,9 @@ export function DefaultLayoutNav() {
           boxShadow="0 0.1em 0.1em rgb(0, 0, 0, 0.25)"
           top={0}
         >
-          Nav
+          <li><Link href="/">Home</Link></li>
+          <li><Link href="/promotions">Promotions</Link></li>
+          <li><Link href="/promotions">Faq</Link></li>
         </Box>
       </Container>
     </Box>

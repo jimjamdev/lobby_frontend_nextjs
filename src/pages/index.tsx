@@ -41,6 +41,8 @@ const Home: TPage = () => {
         </Box>
       </Container>
 
+      <Box display="block" height="20rem" bg="mono.1" marginTop={3}>BOX</Box>
+
     </>
   );
 };
