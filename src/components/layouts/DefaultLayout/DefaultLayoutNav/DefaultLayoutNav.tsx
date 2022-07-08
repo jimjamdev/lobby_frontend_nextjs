@@ -15,7 +15,7 @@ export function DefaultLayoutNav() {
         margin="0 auto"
         padding={0}
         position="sticky"
-        boxShadow="1px 1px 1px rgb(0, 0, 0, 0.1)"
+        boxShadow="0 0.1em 0.1em rgb(0, 0, 0, 0.25)"
         top={0}
       >
         Nav
