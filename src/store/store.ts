@@ -1,18 +1,22 @@
-import { Action, ThunkAction, configureStore } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
+import { createWrapper } from 'next-redux-wrapper';
 
 import { cmsApi } from '~store/features/cms';
+import { gamesApi } from '~store/features/cms/games';
 
-export const store = configureStore({
+export const makeStore = () => configureStore({
   reducer: {
     [cmsApi.reducerPath]: cmsApi.reducer,
+    [gamesApi.reducerPath]: gamesApi.reducer,
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(cmsApi.middleware),
+  middleware: (gDM) => gDM().concat(cmsApi.middleware, gamesApi.middleware),
 });
 
-export type AppDispatch = typeof store.dispatch;
-export type RootState = ReturnType<typeof store.getState>;
-export type AppThunk<ReturnType = void> =
-  ThunkAction<ReturnType, RootState, unknown, Action<string>>;
+export type AppStore = ReturnType<typeof makeStore>;
+export type RootState = ReturnType<AppStore['getState']>;
+export type AppDispatch = AppStore['dispatch'];
 
-setupListeners(store.dispatch);
+setupListeners(makeStore().dispatch);
+
+export const wrapper = createWrapper<AppStore>(makeStore, { debug: true });

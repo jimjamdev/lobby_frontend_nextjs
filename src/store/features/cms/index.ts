@@ -1,6 +1,7 @@
 import {
   BaseQueryFn, createApi, FetchArgs, fetchBaseQuery,
 } from '@reduxjs/toolkit/query/react';
+import { HYDRATE } from 'next-redux-wrapper';
 
 import { config } from 'config';
 import { prepareCmsHeaders } from '~store/utils/prepare-cms-headers';
@@ -13,5 +14,10 @@ export const cmsApi = createApi({
     baseUrl: config.cmsApiUrl,
     prepareHeaders: (headers) => prepareCmsHeaders(headers),
   }) as BaseQueryFn<string | FetchArgs, unknown, TError>,
+  extractRehydrationInfo(action, { reducerPath }) {
+    if (action.type === HYDRATE) {
+      return action.payload[reducerPath];
+    }
+  },
   endpoints: () => ({}),
 });

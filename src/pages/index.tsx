@@ -9,7 +9,8 @@ import { TPage } from '~types/page.types';
 import { handleError } from '~utils/handleError';
 
 // eslint-disable-next-line react/function-component-definition
-const Home: TPage = () => {
+const Home: TPage = ({ defaultData }) => {
+  console.log('defaultData', defaultData);
   const {
     data: games,
     isLoading: isGamesLoading,
@@ -50,5 +51,16 @@ const Home: TPage = () => {
 Home.getLayout = function getLayout(page) {
   return <DefaultLayout>{page}</DefaultLayout>;
 };
+/*
+export async function getServerSideProps() {
+  const { data: games } = await store.dispatch(getGames.initiate({ page: 1 }));
+  return {
+    props: {
+      defaultData: {
+        games,
+      },
+    },
+  };
+} */
 
 export default Home;
