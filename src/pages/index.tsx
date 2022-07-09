@@ -1,15 +1,19 @@
 import Head from 'next/head';
 
 import { Box } from '~components/atoms/Box';
+import { Button } from '~components/atoms/Button';
 import { Container } from '~components/atoms/Container';
+import { Image } from '~components/atoms/Image';
 import { Portal } from '~components/atoms/Portal/Portal';
 import { DefaultLayout } from '~components/layouts/DefaultLayout';
 import { useGetGamesQuery } from '~store/features/cms/games';
 import { TPage } from '~types/page.types';
 import { handleError } from '~utils/handleError';
 
+import fakeImage from '../../public/images/shooter.jpg';
+
 // eslint-disable-next-line react/function-component-definition
-const Home: TPage = ({ defaultData }) => {
+const Home: TPage = ({ defaultData }: any) => {
   console.log('defaultData', defaultData);
   const {
     data: games,
@@ -26,10 +30,14 @@ const Home: TPage = ({ defaultData }) => {
       </Head>
 
       <Portal isOpen>
-        <Box bg="primary.4" position="absolute" top="5em">SOME PORTAL</Box>
+        <Box bg="primary.4" position="absolute" top="5em">
+          SOME PORTAL
+        </Box>
       </Portal>
       <Portal isOpen>
-        <Box bg="primary.6" position="absolute" top="10em">SOME PORTAL 2</Box>
+        <Box bg="primary.6" position="absolute" top="10em">
+          SOME PORTAL 2
+        </Box>
       </Portal>
 
       <Container as="section">
@@ -38,12 +46,26 @@ const Home: TPage = ({ defaultData }) => {
         {isGamesLoading && <div>Loading...</div>}
         <Box as="ul" padding={0} margin={0}>
           {games?.data
-            && games?.data?.map((game) => <Box bg="secondary.4" as="li" margin="0" padding={3} key={game.id}>{game.name}</Box>)}
+            && games?.data?.map((game) => (
+              <Box bg="secondary.4" as="li" margin="0" padding={3} key={game.id}>
+                {game.name}
+              </Box>
+            ))}
         </Box>
       </Container>
 
-      <Box display="block" height="20rem" bg="mono.1" marginTop={3}>BOX</Box>
-
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        height="25em"
+        bg="mono.1"
+        marginTop={3}
+        position="relative"
+      >
+        <Box zIndex={1}><Button variant="primary" size="lg">PLAY NOW</Button></Box>
+        <Image src={fakeImage} alt="some fake image" layout="fill" objectFit="cover" />
+      </Box>
     </>
   );
 };

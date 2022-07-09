@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {
-  variant, space, layout,
+  variant, space, layout, position,
 } from 'styled-system';
 
 import { TButton } from './Button.types';
@@ -26,4 +26,5 @@ export const Button = styled('button')<TButton>`
   )};
   ${space};
   ${layout};
+  ${position};
 `;
