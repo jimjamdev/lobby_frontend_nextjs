@@ -23,7 +23,9 @@ export function DefaultLayoutNav() {
         >
           <li><Link href="/">Home</Link></li>
           <li><Link href="/promotions">Promotions</Link></li>
+          <li><Link href="/leaderboard">Leaderboard</Link></li>
           <li><Link href="/faq">Faq</Link></li>
+          <li><Link href="/user-profile">Profile</Link></li>
         </Box>
       </Container>
     </Box>

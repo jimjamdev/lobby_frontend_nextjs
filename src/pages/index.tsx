@@ -63,7 +63,11 @@ const Home: TPage = ({ defaultData }: any) => {
         marginTop={3}
         position="relative"
       >
-        <Box zIndex={1}><Button variant="primary" size={['md', 'lg']}>PLAY NOW</Button></Box>
+        <Box zIndex={1}>
+          <Button variant="primary" size={['md', 'lg']}>
+            PLAY NOW
+          </Button>
+        </Box>
         <Image src={fakeImage} alt="some fake image" layout="fill" objectFit="cover" />
       </Box>
     </>
