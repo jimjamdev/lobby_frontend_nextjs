@@ -1,12 +1,19 @@
 import { Box } from '~components/atoms/Box';
 import { Container } from '~components/atoms/Container';
+import { Flex } from '~components/atoms/Flex';
 import { Link } from '~components/atoms/Link';
 
 export function DefaultLayoutNav() {
   return (
-    <Box id="top-menu" className="top-menu" display={['none', 'block']} height="2.8em" position="relative">
+    <Box
+      id="top-menu"
+      className="top-menu"
+      display={['none', 'block']}
+      height="2.8em"
+      position="relative"
+    >
       <Container>
-        <Box
+        <Flex
           as="ul"
           display="flex"
           alignItems="center"
@@ -21,12 +28,22 @@ export function DefaultLayoutNav() {
           boxShadow="0 0.1em 0.1em rgb(0, 0, 0, 0.25)"
           top={0}
         >
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/promotions">Promotions</Link></li>
-          <li><Link href="/leaderboard">Leaderboard</Link></li>
-          <li><Link href="/faq">Faq</Link></li>
-          <li><Link href="/user-profile">Profile</Link></li>
-        </Box>
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/promotions">Promotions</Link>
+          </li>
+          <li>
+            <Link href="/leaderboard">Leaderboard</Link>
+          </li>
+          <li>
+            <Link href="/faq">Faq</Link>
+          </li>
+          <li>
+            <Link href="/user-profile">My Profile</Link>
+          </li>
+        </Flex>
       </Container>
     </Box>
   );

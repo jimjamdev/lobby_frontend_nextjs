@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { Box } from '~components/atoms/Box';
 import { Button } from '~components/atoms/Button';
 import { Container } from '~components/atoms/Container';
+import { Flex } from '~components/atoms/Flex';
 import { Image } from '~components/atoms/Image';
 import { Portal } from '~components/atoms/Portal/Portal';
 import { DefaultLayout } from '~components/layouts/DefaultLayout';
@@ -54,8 +55,7 @@ const Home: TPage = ({ defaultData }: any) => {
         </Box>
       </Container>
 
-      <Box
-        display="flex"
+      <Flex
         alignItems="center"
         justifyContent="center"
         height="25em"
@@ -69,7 +69,7 @@ const Home: TPage = ({ defaultData }: any) => {
           </Button>
         </Box>
         <Image src={fakeImage} alt="some fake image" layout="fill" objectFit="cover" />
-      </Box>
+      </Flex>
     </>
   );
 };
