@@ -61,6 +61,7 @@ export function buttonSizesTheme() {
       padding: '0 10px',
       minWidth: '315px',
       height: '50px',
+      lineHeight: '50px',
     },
     md: {
       fontSize: '16px',
