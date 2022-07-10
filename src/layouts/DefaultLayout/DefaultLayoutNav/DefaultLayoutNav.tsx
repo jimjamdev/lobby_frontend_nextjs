@@ -7,6 +7,7 @@ import { Flex } from '~components/atoms/Flex';
 
 export function DefaultLayoutNav() {
   const router = useRouter();
+  const { pathname = '' } = router;
 
   return (
     <Box
@@ -33,21 +34,21 @@ export function DefaultLayoutNav() {
           top={0}
         >
           <li>
-            <DefaultLayoutNavItem href="/" isActive={router?.pathname === '/'}>
+            <DefaultLayoutNavItem href="/" isActive={pathname === '/'}>
               Home
             </DefaultLayoutNavItem>
           </li>
           <li>
-            <DefaultLayoutNavItem href="/promotions" isActive={router?.pathname === '/promotions'}>Promotions</DefaultLayoutNavItem>
+            <DefaultLayoutNavItem href="/promotions" isActive={pathname === '/promotions'}>Promotions</DefaultLayoutNavItem>
           </li>
           <li>
-            <DefaultLayoutNavItem href="/leaderboard" isActive={router?.pathname === '/leaderboard'}>Leaderboard</DefaultLayoutNavItem>
+            <DefaultLayoutNavItem href="/leaderboard" isActive={pathname === '/leaderboard'}>Leaderboard</DefaultLayoutNavItem>
           </li>
           <li>
-            <DefaultLayoutNavItem href="/faq" isActive={router?.pathname === '/faq'}>Faq</DefaultLayoutNavItem>
+            <DefaultLayoutNavItem href="/faq" isActive={pathname === '/faq'}>Faq</DefaultLayoutNavItem>
           </li>
           <li>
-            <DefaultLayoutNavItem href="/user-profile" isActive={router?.pathname === '/user-profile'}>My Profile</DefaultLayoutNavItem>
+            <DefaultLayoutNavItem href="/user-profile" isActive={pathname === '/user-profile'}>My Profile</DefaultLayoutNavItem>
           </li>
         </Flex>
       </Container>
