@@ -2,21 +2,18 @@ import Head from 'next/head';
 
 import { Box } from '~components/atoms/Box';
 import { Container } from '~components/atoms/Container';
+import { Overlay } from '~components/atoms/Overlay/OverLay';
 import { Portal } from '~components/atoms/Portal/Portal';
 import { WideBanner } from '~components/molecules/WideBanner';
+import { GameGrid } from '~components/organisms/GameGrid/GameGrid';
 import { DefaultLayout } from '~layouts/DefaultLayout';
 import { useGetGamesQuery } from '~store/features/cms/games';
 import { TPage } from '~types/page.types';
-import { handleError } from '~utils/handleError';
 
 // eslint-disable-next-line react/function-component-definition
 const Home: TPage = ({ defaultData }: any) => {
   console.log('defaultData', defaultData);
-  const {
-    data: games,
-    isLoading: isGamesLoading,
-    error: gamesError,
-  } = useGetGamesQuery({ page: 1 });
+  const defaultGames = useGetGamesQuery({ page: 1 });
 
   return (
     <>
@@ -26,11 +23,13 @@ const Home: TPage = ({ defaultData }: any) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Portal isOpen>
-        <Box bg="primary.4" position="absolute" top="5em">
-          SOME PORTAL
-        </Box>
-      </Portal>
+      {/* <Portal isOpen>
+        <Overlay isOpen>
+          <Box bg="primary.4" position="absolute" top="5em">
+            SOME PORTAL
+          </Box>
+        </Overlay>
+      </Portal> */}
       <Portal isOpen>
         <Box bg="primary.6" position="absolute" top="10em">
           SOME PORTAL 2
@@ -38,17 +37,7 @@ const Home: TPage = ({ defaultData }: any) => {
       </Portal>
 
       <Container as="section">
-        {games && games?.meta?.pagination?.total} Results
-        {gamesError && handleError(gamesError)}
-        {isGamesLoading && <div>Loading...</div>}
-        <Box as="ul" padding={0} margin={0}>
-          {games?.data
-            && games?.data?.map((game) => (
-              <Box bg="secondary.4" as="li" margin="0" padding={3} key={game.id}>
-                {game.name}
-              </Box>
-            ))}
-        </Box>
+        <GameGrid defaultGames={defaultGames} />
       </Container>
 
       <WideBanner />

@@ -17,10 +17,10 @@ export function WideBanner() {
       position="relative"
     >
       <Flex zIndex={1} flexDirection="column" justifyContent="center" alignItems="center">
-        <Text as="h3" color="mono.0" margin={0} fontSize={6}>
+        <Text as="h3" color="mono.0" margin={0} fontSize={6} textShadow={1}>
           CLAIM FREE POINTS
         </Text>
-        <Text color="mono.0" lineHeight={0} marginBottom={4} textShadow={3}>
+        <Text color="mono.0" lineHeight={0} marginBottom={4} textShadow={1}>
           Play games and get free points.
         </Text>
         <Button variant="primary" size={['md', 'lg']}>

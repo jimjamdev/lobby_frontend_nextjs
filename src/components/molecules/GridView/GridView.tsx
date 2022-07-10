@@ -8,7 +8,7 @@ export function GridView({ children, columns = [1, 4, 6], gridGap = [2, 4, 6] }:
     : `repeat(${columns}, 1fr)`;
 
   return (
-    <Grid gridTemplateColumns={gridTemplateColumns} gridGap={gridGap}>
+    <Grid display="grid" gridTemplateColumns={gridTemplateColumns} gridGap={gridGap}>
       {children}
     </Grid>
   );
