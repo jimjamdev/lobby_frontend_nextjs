@@ -6,7 +6,7 @@ import { Container } from '~components/atoms/Container';
 import { Flex } from '~components/atoms/Flex';
 import { Image } from '~components/atoms/Image';
 import { Portal } from '~components/atoms/Portal/Portal';
-import { DefaultLayout } from '~components/layouts/DefaultLayout';
+import { DefaultLayout } from '~layouts/DefaultLayout';
 import { useGetGamesQuery } from '~store/features/cms/games';
 import { TPage } from '~types/page.types';
 import { handleError } from '~utils/handleError';

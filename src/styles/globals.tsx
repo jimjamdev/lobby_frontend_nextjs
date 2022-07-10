@@ -15,6 +15,12 @@ const GlobalStyle = createGlobalStyle`
     display: contents;
     height: 100%; // fallback for browsers that don't support display contents
   }
+  
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 `;
 
 export default GlobalStyle;

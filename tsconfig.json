@@ -18,6 +18,7 @@
     "paths": {
       "~store/*": ["store/*"],
       "~containers/*": ["containers/*"],
+      "~layouts/*": ["layouts/*"],
       "~components/*": ["components/*"],
       "~utils/*": ["utils/*"],
       "~hooks/*": ["hooks/*"],

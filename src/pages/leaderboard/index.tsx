@@ -1,4 +1,4 @@
-import { DefaultLayout } from '~components/layouts/DefaultLayout';
+import { DefaultLayout } from '~layouts/DefaultLayout';
 import { TPage } from '~types/page.types';
 
 // eslint-disable-next-line react/function-component-definition
