@@ -13,7 +13,6 @@ export function WideBanner() {
       justifyContent="center"
       height="25em"
       bg="mono.1"
-      marginTop={3}
       position="relative"
     >
       <Flex zIndex={1} flexDirection="column" justifyContent="center" alignItems="center">

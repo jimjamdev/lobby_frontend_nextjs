@@ -4,6 +4,7 @@ import { Box } from '~components/atoms/Box';
 import { Container } from '~components/atoms/Container';
 import { Overlay } from '~components/atoms/Overlay/OverLay';
 import { Portal } from '~components/atoms/Portal/Portal';
+import { Spacing } from '~components/atoms/Spacing';
 import { WideBanner } from '~components/molecules/WideBanner';
 import { GameGrid } from '~components/organisms/GameGrid/GameGrid';
 import { DefaultLayout } from '~layouts/DefaultLayout';
@@ -37,7 +38,9 @@ const Home: TPage = ({ defaultData }: any) => {
       </Portal>
 
       <Container as="section">
-        <GameGrid defaultGames={defaultGames} />
+        <Spacing mt={3} mb={3}>
+          <GameGrid defaultGames={defaultGames} />
+        </Spacing>
       </Container>
 
       <WideBanner />
