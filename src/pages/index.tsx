@@ -68,7 +68,7 @@ const Home: TPage = ({ defaultData }: any) => {
             PLAY NOW
           </Button>
         </Box>
-        <Image src={fakeImage} alt="some fake image" layout="fill" objectFit="cover" />
+        <Image src={fakeImage} alt="some fake image" layout="fill" objectFit="cover" priority />
       </Flex>
     </>
   );
