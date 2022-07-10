@@ -2,6 +2,8 @@ import { Box } from '~components/atoms/Box';
 import { GridView } from '~components/molecules/GridView';
 import { handleError } from '~utils/handleError';
 
+// import { TGameGrid } from './GameGrid.types';
+
 export function GameGrid({ defaultGames }: any) {
   const { data, isLoading, error } = defaultGames;
   return (

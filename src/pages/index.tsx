@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 import { Box } from '~components/atoms/Box';
 import { Container } from '~components/atoms/Container';
-import { Overlay } from '~components/atoms/Overlay/OverLay';
+// import { Overlay } from '~components/atoms/Overlay/OverLay';
 import { Portal } from '~components/atoms/Portal/Portal';
 import { Spacing } from '~components/atoms/Spacing';
 import { WideBanner } from '~components/molecules/WideBanner';

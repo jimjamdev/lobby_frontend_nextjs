@@ -1,9 +1,13 @@
+import { SerializedError } from '@reduxjs/toolkit';
+
 import { TMeta } from '~types/data';
 import { TDefaultRecord } from '~types/data/common';
 
 export type TGames = {
   data?: Array<TGame>;
   meta?: TMeta;
+  isLoading?: boolean;
+  error?: SerializedError
 };
 
 export type TGame = TDefaultRecord & {
