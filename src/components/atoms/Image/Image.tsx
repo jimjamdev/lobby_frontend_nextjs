@@ -1,4 +1,5 @@
-import { default as NextImage } from 'next/image';
+// eslint-disable-next-line import/no-named-default
+import NextImage from 'next/image';
 
 import { TImage } from './Image.types';
 

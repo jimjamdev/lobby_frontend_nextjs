@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   *, *:before, *:after {
     box-sizing: border-box;

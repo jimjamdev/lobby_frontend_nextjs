@@ -19,4 +19,4 @@ export type AppDispatch = AppStore['dispatch'];
 
 setupListeners(makeStore().dispatch);
 
-export const wrapper = createWrapper<AppStore>(makeStore, { debug: true });
+export const wrapper = createWrapper<AppStore>(makeStore, { debug: false });
