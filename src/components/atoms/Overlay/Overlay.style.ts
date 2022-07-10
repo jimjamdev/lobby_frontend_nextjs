@@ -1,12 +1,8 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 import { TOverlay } from './Overlay.types';
 
 export const OverlayStyle = styled.div<TOverlay>`
-  html,
-  body {
-    overflow: hidden;
-  }
   pointer-events: none;
   overscroll-behavior: contain;
   position: fixed;
@@ -18,4 +14,13 @@ export const OverlayStyle = styled.div<TOverlay>`
   height: 100%;
   background-color: ${({ isTransparent }) => (isTransparent ? 'transparent' : 'rgba(0, 0, 0, 0.9)')};
   z-index: 1000;
+`;
+
+export const OverlayGlobals = createGlobalStyle`
+html,body {
+  overflow: hidden;
+}
+body {
+  -webkit-overflow-scrolling: touch;
+}
 `;

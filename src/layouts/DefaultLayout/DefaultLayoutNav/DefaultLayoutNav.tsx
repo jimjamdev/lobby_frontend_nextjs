@@ -1,9 +1,13 @@
+import { useRouter } from 'next/router';
+
+import { DefaultLayoutNavItem } from 'layouts/DefaultLayout/DefaultLayoutNav/DefaultLayoutNav.styles';
 import { Box } from '~components/atoms/Box';
 import { Container } from '~components/atoms/Container';
 import { Flex } from '~components/atoms/Flex';
-import { Link } from '~components/atoms/Link';
 
 export function DefaultLayoutNav() {
+  const router = useRouter();
+
   return (
     <Box
       id="top-menu"
@@ -29,19 +33,21 @@ export function DefaultLayoutNav() {
           top={0}
         >
           <li>
-            <Link href="/">Home</Link>
+            <DefaultLayoutNavItem href="/" isActive={router?.pathname === '/'}>
+              Home
+            </DefaultLayoutNavItem>
           </li>
           <li>
-            <Link href="/promotions">Promotions</Link>
+            <DefaultLayoutNavItem href="/promotions" isActive={router?.pathname === '/promotions'}>Promotions</DefaultLayoutNavItem>
           </li>
           <li>
-            <Link href="/leaderboard">Leaderboard</Link>
+            <DefaultLayoutNavItem href="/leaderboard" isActive={router?.pathname === '/leaderboard'}>Leaderboard</DefaultLayoutNavItem>
           </li>
           <li>
-            <Link href="/faq">Faq</Link>
+            <DefaultLayoutNavItem href="/faq" isActive={router?.pathname === '/faq'}>Faq</DefaultLayoutNavItem>
           </li>
           <li>
-            <Link href="/user-profile">My Profile</Link>
+            <DefaultLayoutNavItem href="/user-profile" isActive={router?.pathname === '/user-profile'}>My Profile</DefaultLayoutNavItem>
           </li>
         </Flex>
       </Container>
