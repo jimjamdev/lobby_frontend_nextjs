@@ -16,7 +16,7 @@ export const OverlayStyle = styled.div<TOverlay>`
   z-index: 1000;
 `;
 
-export const OverlayGlobals = createGlobalStyle`
+export const DisableWindowScroll = createGlobalStyle`
 html,body {
   overflow: hidden;
 }
