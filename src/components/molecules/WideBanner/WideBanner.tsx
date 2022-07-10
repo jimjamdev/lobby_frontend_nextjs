@@ -1,4 +1,3 @@
-import { Box } from '~components/atoms/Box';
 import { Button } from '~components/atoms/Button';
 import { Flex } from '~components/atoms/Flex';
 import { Image } from '~components/atoms/Image';
@@ -21,7 +20,7 @@ export function WideBanner() {
         <Text as="h3" color="mono.0" margin={0} fontSize={6}>
           CLAIM FREE POINTS
         </Text>
-        <Text color="mono.0" lineHeight={0} marginBottom={4}>
+        <Text color="mono.0" lineHeight={0} marginBottom={4} textShadow={3}>
           Play games and get free points.
         </Text>
         <Button variant="primary" size={['md', 'lg']}>
