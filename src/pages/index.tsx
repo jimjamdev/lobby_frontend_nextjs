@@ -1,18 +1,13 @@
 import Head from 'next/head';
 
 import { Box } from '~components/atoms/Box';
-import { Button } from '~components/atoms/Button';
 import { Container } from '~components/atoms/Container';
-import { Flex } from '~components/atoms/Flex';
-import { Image } from '~components/atoms/Image';
 import { Portal } from '~components/atoms/Portal/Portal';
-import { Text } from '~components/atoms/Text/Text';
+import { WideBanner } from '~components/molecules/WideBanner';
 import { DefaultLayout } from '~layouts/DefaultLayout';
 import { useGetGamesQuery } from '~store/features/cms/games';
 import { TPage } from '~types/page.types';
 import { handleError } from '~utils/handleError';
-
-import fakeImage from '../../public/images/shooter.jpg';
 
 // eslint-disable-next-line react/function-component-definition
 const Home: TPage = ({ defaultData }: any) => {
@@ -56,22 +51,7 @@ const Home: TPage = ({ defaultData }: any) => {
         </Box>
       </Container>
 
-      <Flex
-        alignItems="center"
-        justifyContent="center"
-        height="25em"
-        bg="mono.1"
-        marginTop={3}
-        position="relative"
-      >
-        <Box zIndex={1}>
-          <Text color="white" fontSize={6}>Some amazing offer</Text>
-          <Button variant="primary" size={['md', 'lg']}>
-            PLAY NOW
-          </Button>
-        </Box>
-        <Image src={fakeImage} alt="some fake image" layout="fill" objectFit="cover" priority />
-      </Flex>
+      <WideBanner />
     </>
   );
 };
