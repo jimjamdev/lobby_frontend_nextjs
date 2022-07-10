@@ -1,3 +1,10 @@
 import styled from 'styled-components';
+import {
+  compose, space, typography, color,
+} from 'styled-system';
 
-export const Text = styled.p``;
+import { TText } from './Text.types';
+
+export const Text = styled.p<TText>`
+  ${compose(space, typography, color)};
+`;

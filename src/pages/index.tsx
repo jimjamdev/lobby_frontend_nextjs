@@ -6,6 +6,7 @@ import { Container } from '~components/atoms/Container';
 import { Flex } from '~components/atoms/Flex';
 import { Image } from '~components/atoms/Image';
 import { Portal } from '~components/atoms/Portal/Portal';
+import { Text } from '~components/atoms/Text/Text';
 import { DefaultLayout } from '~layouts/DefaultLayout';
 import { useGetGamesQuery } from '~store/features/cms/games';
 import { TPage } from '~types/page.types';
@@ -64,6 +65,7 @@ const Home: TPage = ({ defaultData }: any) => {
         position="relative"
       >
         <Box zIndex={1}>
+          <Text color="white" fontSize={6}>Some amazing offer</Text>
           <Button variant="primary" size={['md', 'lg']}>
             PLAY NOW
           </Button>
