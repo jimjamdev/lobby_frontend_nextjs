@@ -6,6 +6,9 @@ import {
 import { TFlex } from './Flex.types';
 
 export const Flex = styled.div<TFlex>`
-  display: flex;
   ${compose(space, layout, color, border, position, flexbox, shadow)};
 `;
+
+Flex.defaultProps = {
+  display: 'flex',
+};

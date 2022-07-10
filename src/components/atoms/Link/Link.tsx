@@ -1,5 +1,4 @@
-// eslint-disable-next-line import/no-named-default
-import { default as NextLink } from 'next/link';
+import NextLink from 'next/link';
 
 import { TLink } from './Link.types';
 
