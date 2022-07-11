@@ -7,9 +7,10 @@ import { Portal } from '~components/atoms/Portal/Portal';
 import { Spacing } from '~components/atoms/Spacing';
 import { WideBanner } from '~components/molecules/WideBanner';
 import { GameGrid } from '~components/organisms/GameGrid/GameGrid';
+import { useModal } from '~hooks/useModal/useModal';
 import { DefaultLayout } from '~layouts/DefaultLayout';
 import { useGetGamesQuery } from '~store/features/cms/games';
-import { useOpenModal } from '~store/features/modals';
+import { openModal } from '~store/features/modals';
 import { THomePage, TPage } from '~types/pages';
 
 // eslint-disable-next-line react/function-component-definition
@@ -17,7 +18,7 @@ const Home: TPage = ({ defaultData }: THomePage) => {
   console.log('defaultData', defaultData);
   const defaultGames = useGetGamesQuery({ page: 1 });
 
-  useOpenModal('gameInfo');
+  useModal('gameInfo');
 
   return (
     <>
