@@ -1,0 +1,1 @@
+export { GameInfoModal } from './GameInfoModal';

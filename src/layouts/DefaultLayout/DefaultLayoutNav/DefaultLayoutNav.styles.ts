@@ -6,12 +6,12 @@ import { Link } from '~components/atoms/Link';
 /* We'll break this up into its own folder as it will have its own types, func etc */
 
 export type TDefaultLayoutNavItem = {
-  isActive: boolean;
+  active: boolean;
 };
 
 export const DefaultLayoutNavItem = styled(Link)<TDefaultLayoutNavItem>`
   text-decoration: none;
-  color: ${({ theme, isActive }) => (!isActive ? theme.colors.mono[0] : theme.colors.highlight[5])};
+  color: ${({ theme, active }) => (!active ? theme.colors.mono[0] : theme.colors.highlight[5])};
   padding: 1rem;
   ${compose(color, flexbox)};
 `;

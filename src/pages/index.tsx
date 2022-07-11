@@ -9,12 +9,15 @@ import { WideBanner } from '~components/molecules/WideBanner';
 import { GameGrid } from '~components/organisms/GameGrid/GameGrid';
 import { DefaultLayout } from '~layouts/DefaultLayout';
 import { useGetGamesQuery } from '~store/features/cms/games';
-import { TPage } from '~types/page.types';
+import { useOpenModal } from '~store/features/modals';
+import { THomePage, TPage } from '~types/pages';
 
 // eslint-disable-next-line react/function-component-definition
-const Home: TPage = ({ defaultData }: any) => {
+const Home: TPage = ({ defaultData }: THomePage) => {
   console.log('defaultData', defaultData);
   const defaultGames = useGetGamesQuery({ page: 1 });
+
+  useOpenModal('gameInfo');
 
   return (
     <>

@@ -34,21 +34,21 @@ export function DefaultLayoutNav() {
           top={0}
         >
           <li>
-            <DefaultLayoutNavItem href="/" isActive={pathname === '/'}>
+            <DefaultLayoutNavItem href="/" active={pathname === '/'}>
               Home
             </DefaultLayoutNavItem>
           </li>
           <li>
-            <DefaultLayoutNavItem href="/promotions" isActive={pathname === '/promotions'}>Promotions</DefaultLayoutNavItem>
+            <DefaultLayoutNavItem href="/promotions" active={pathname === '/promotions'}>Promotions</DefaultLayoutNavItem>
           </li>
           <li>
-            <DefaultLayoutNavItem href="/leaderboard" isActive={pathname === '/leaderboard'}>Leaderboard</DefaultLayoutNavItem>
+            <DefaultLayoutNavItem href="/leaderboard" active={pathname === '/leaderboard'}>Leaderboard</DefaultLayoutNavItem>
           </li>
           <li>
-            <DefaultLayoutNavItem href="/faq" isActive={pathname === '/faq'}>Faq</DefaultLayoutNavItem>
+            <DefaultLayoutNavItem href="/faq" active={pathname === '/faq'}>Faq</DefaultLayoutNavItem>
           </li>
           <li>
-            <DefaultLayoutNavItem href="/user-profile" isActive={pathname === '/user-profile'}>My Profile</DefaultLayoutNavItem>
+            <DefaultLayoutNavItem href="/user-profile" active={pathname === '/user-profile'}>My Profile</DefaultLayoutNavItem>
           </li>
         </Flex>
       </Container>

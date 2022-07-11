@@ -4,11 +4,13 @@ import { createWrapper } from 'next-redux-wrapper';
 
 import { cmsApi } from '~store/features/cms';
 import { gamesApi } from '~store/features/cms/games';
+import modalsSlice from '~store/features/modals/modals.slice';
 
 export const makeStore = () => configureStore({
   reducer: {
     [cmsApi.reducerPath]: cmsApi.reducer,
     [gamesApi.reducerPath]: gamesApi.reducer,
+    modals: modalsSlice,
   },
   middleware: (gDM) => gDM().concat(cmsApi.middleware, gamesApi.middleware),
 });
