@@ -10,7 +10,6 @@ import { GameGrid } from '~components/organisms/GameGrid/GameGrid';
 import { useModal } from '~hooks/useModal/useModal';
 import { DefaultLayout } from '~layouts/DefaultLayout';
 import { useGetGamesQuery } from '~store/features/cms/games';
-import { openModal } from '~store/features/modals';
 import { THomePage, TPage } from '~types/pages';
 
 // eslint-disable-next-line react/function-component-definition
