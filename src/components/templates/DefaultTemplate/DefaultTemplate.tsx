@@ -1,12 +1,9 @@
-import {
-  DefaultTemplateMobileNav,
-} from '~components/templates/DefaultTemplate/DefaultTemplateMobileMenu';
-
 import { TDefaultTemplate } from './DefaultTemplate.types';
 import { DefaultTemplateContainer } from './DefaultTemplateContainer';
 import { DefaultTemplateContent } from './DefaultTemplateContent';
 import { DefaultTemplateFooter } from './DefaultTemplateFooter';
 import { DefaultTemplateHeader } from './DefaultTemplateHeader';
+import { DefaultTemplateMobileNav } from './DefaultTemplateMobileMenu';
 import { DefaultTemplateNav } from './DefaultTemplateNav';
 
 /**
