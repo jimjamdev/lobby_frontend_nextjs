@@ -34,10 +34,10 @@ const modalSlice = createSlice({
       // eslint-disable-next-line no-param-reassign
       state.current = { key, Component: activeModal, props };
     },
-    resetCurrentModal(state, action) {
-      console.log('**action', action);
+    resetCurrentModal(state) {
+      console.log('**state', state);
       // eslint-disable-next-line no-param-reassign
-      state.current = undefined;
+      state.current = {};
     },
   },
 });
