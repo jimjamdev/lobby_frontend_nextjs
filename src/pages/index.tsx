@@ -7,19 +7,17 @@ import { WideBanner } from '~components/molecules/WideBanner';
 import { GameGrid } from '~components/organisms/GameGrid/GameGrid';
 import { DefaultLayout } from '~layouts/DefaultLayout';
 import { useGetGamesQuery } from '~store/features/cms/games';
-import { openModalByKey } from '~store/features/modals';
-import { useAppDispatch } from '~store/store';
 import { THomePage, TPage } from '~types/pages';
+import { openModal } from '~utils/openModal';
 
 // eslint-disable-next-line react/function-component-definition
 const Home: TPage = ({ defaultData }: THomePage) => {
-  const dispatch = useAppDispatch();
   console.log('defaultData', defaultData);
   const defaultGames = useGetGamesQuery({ page: 1 });
 
   useEffect(() => {
-    dispatch(openModalByKey({ key: 'gameInfo', props: { gameId: 1 } }));
-  }, [dispatch]);
+    openModal('gameInfo', { gameId: 1 });
+  }, []);
 
   return (
     <>

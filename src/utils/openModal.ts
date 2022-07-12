@@ -1,6 +1,7 @@
+import { openModalByKey } from '~store/features/modals';
 import { store } from '~store/store';
 
-export function openModal(key: string, props?: unknown): any {
+export const openModal = (key: string, props?: unknown): any => {
   const { dispatch } = store;
-  return dispatch(openModal(key, props));
-}
+  return dispatch(openModalByKey({ key, props }));
+};
