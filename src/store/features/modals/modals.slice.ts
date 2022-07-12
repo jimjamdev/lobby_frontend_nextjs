@@ -28,15 +28,18 @@ const modalSlice = createSlice({
   reducers: {
     openModalByKey(state, action) {
       const { key, props } = action.payload;
+      // @ts-ignore
       const activeModal = modalList[key] && modalList[key];
       console.log('**action', action);
+      // eslint-disable-next-line no-param-reassign
       state.current = { key, Component: activeModal, props };
     },
-    closeModals(state) {
+    resetCurrentModal(state) {
+      // eslint-disable-next-line no-param-reassign
       state.current = undefined;
     },
   },
 });
 
-export const { openModalByKey, closeModals } = modalSlice.actions;
+export const { openModalByKey, resetCurrentModal } = modalSlice.actions;
 export default modalSlice.reducer;

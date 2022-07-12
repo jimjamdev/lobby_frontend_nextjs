@@ -3,7 +3,6 @@ import styled, { createGlobalStyle } from 'styled-components';
 import { TOverlay } from './Overlay.types';
 
 export const OverlayStyle = styled.div<TOverlay>`
-  pointer-events: none;
   overscroll-behavior: contain;
   position: fixed;
   top: 0;
