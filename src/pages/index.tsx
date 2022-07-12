@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { useEffect } from 'react';
 
 import { Container } from '~components/atoms/Container';
 import { Spacing } from '~components/atoms/Spacing';
@@ -8,16 +7,11 @@ import { GameGrid } from '~components/organisms/GameGrid/GameGrid';
 import { DefaultLayout } from '~layouts/DefaultLayout';
 import { useGetGamesQuery } from '~store/features/cms/games';
 import { THomePage, TPage } from '~types/pages';
-import { openModal } from '~utils/openModal';
 
 // eslint-disable-next-line react/function-component-definition
 const Home: TPage = ({ defaultData }: THomePage) => {
   console.log('defaultData', defaultData);
   const defaultGames = useGetGamesQuery({ page: 1 });
-
-  useEffect(() => {
-    openModal('gameInfo', { gameId: 1 });
-  }, []);
 
   return (
     <>

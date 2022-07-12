@@ -7,10 +7,16 @@ export type TModals = {
     key?: string;
     Component?: any;
     props?: any;
-  }
+  };
 };
 
-const initialState = { current: {} } as TModals;
+const initialState: TModals = {
+  current: {
+    key: undefined,
+    Component: undefined,
+    props: undefined,
+  },
+};
 
 const modalSlice = createSlice({
   name: 'modal',
@@ -20,14 +26,10 @@ const modalSlice = createSlice({
       const { key, props } = action.payload;
       // @ts-ignore
       const activeModal = modalsList[key] && modalsList[key];
-      console.log('**action', action);
-      // eslint-disable-next-line no-param-reassign
       state.current = { key, Component: activeModal, props };
     },
     resetCurrentModal(state) {
-      console.log('**state', state);
-      // eslint-disable-next-line no-param-reassign
-      state.current = {};
+      state.current = initialState?.current;
     },
   },
 });

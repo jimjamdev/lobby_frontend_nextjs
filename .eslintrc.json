@@ -38,6 +38,8 @@
     "react/jsx-props-no-spreading": "off",
     "react/jsx-one-expression-per-line": "off",
     "import/prefer-default-export": "off", // named exports for components
-    "react/require-default-props": "off" // deprecated in react
+    "react/require-default-props": "off",  // deprecated in react
+    "import/no-cycle": "off", // redux-toolkit has issue reporting circular dependencies that aren't there
+    "no-param-reassign": ["error", { "props": false }] // redux-toolkit
   }
 }
