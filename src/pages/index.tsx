@@ -7,7 +7,7 @@ import { WideBanner } from '~components/molecules/WideBanner';
 import { GameGrid } from '~components/organisms/GameGrid/GameGrid';
 import { DefaultLayout } from '~layouts/DefaultLayout';
 import { useGetGamesQuery } from '~store/features/cms/games';
-import { openModal } from '~store/features/modals';
+import { openModalByKey } from '~store/features/modals';
 import { useAppDispatch } from '~store/store';
 import { THomePage, TPage } from '~types/pages';
 
@@ -18,7 +18,7 @@ const Home: TPage = ({ defaultData }: THomePage) => {
   const defaultGames = useGetGamesQuery({ page: 1 });
 
   useEffect(() => {
-    dispatch(openModal({ key: 'gameInfo', some: 'props' }));
+    dispatch(openModalByKey({ key: 'gameInfo', props: { gameId: 1 } }));
   }, [dispatch]);
 
   return (

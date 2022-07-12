@@ -7,14 +7,22 @@ import { cmsApi } from '~store/features/cms';
 import { gamesApi } from '~store/features/cms/games';
 import modalsSlice from '~store/features/modals/modals.slice';
 
-export const makeStore = () => configureStore({
+let store: ReturnType<typeof configStore>;
+
+const configStore = () => configureStore({
   reducer: {
     [cmsApi.reducerPath]: cmsApi.reducer,
     [gamesApi.reducerPath]: gamesApi.reducer,
     modals: modalsSlice,
   },
-  middleware: (gDM) => gDM().concat(cmsApi.middleware, gamesApi.middleware),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware()
+    .concat(cmsApi.middleware, gamesApi.middleware),
 });
+
+export const makeStore = () => {
+  store = configStore();
+  return store;
+};
 
 export type AppStore = ReturnType<typeof makeStore>;
 export type RootState = ReturnType<AppStore['getState']>;
@@ -24,5 +32,7 @@ export const useAppDispatch = () => useDispatch<AppDispatch>();
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 
 setupListeners(makeStore().dispatch);
+
+export { store };
 
 export const wrapper = createWrapper<AppStore>(makeStore, { debug: false });

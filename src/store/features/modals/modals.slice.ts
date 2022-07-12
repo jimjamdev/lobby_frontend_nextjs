@@ -14,12 +14,10 @@ export type TModalList = {
   gameInfo?: ComponentType<any>;
 };
 
-const gameInfo = dynamic(
-  () => import('../../../components/organisms/modals/GameInfoModal/GameInfoModal'),
-);
-
 const modalList: TModalList = {
-  gameInfo,
+  gameInfo: dynamic(
+    () => import('../../../components/organisms/modals/GameInfoModal/GameInfoModal'),
+  ),
 };
 
 const initialState = { current: {} } as TModals;
@@ -28,17 +26,17 @@ const modalSlice = createSlice({
   name: 'modal',
   initialState,
   reducers: {
-    openModal(state, action) {
+    openModalByKey(state, action) {
       const { key, props } = action.payload;
-      const activeModal = modalList[key];
+      const activeModal = modalList[key] && modalList[key];
       console.log('**action', action);
       state.current = { key, Component: activeModal, props };
     },
-    closeModal(state) {
+    closeModals(state) {
       state.current = undefined;
     },
   },
 });
 
-export const { openModal, closeModal } = modalSlice.actions;
+export const { openModalByKey, closeModals } = modalSlice.actions;
 export default modalSlice.reducer;
