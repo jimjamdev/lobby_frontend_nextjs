@@ -1,4 +1,5 @@
 import { DefaultTemplate } from '~components/templates/DefaultTemplate';
+import { AppContainer } from '~containers/AppContainer/AppContainer';
 
 import { TDefaultLayout } from './DefaultLayout.types';
 import { DefaultLayoutHeader } from './DefaultLayoutHeader';
@@ -14,12 +15,15 @@ function TestMobileNav() {
 
 export function DefaultLayout({ children }: TDefaultLayout) {
   return (
-    <DefaultTemplate
-      header={<DefaultLayoutHeader />}
-      topNav={<DefaultLayoutNav />}
-      footer={<TestFooter />}
-      mobileNav={<TestMobileNav />}
-    >{children}
-    </DefaultTemplate>
+    <AppContainer>
+      <DefaultTemplate
+        header={<DefaultLayoutHeader />}
+        topNav={<DefaultLayoutNav />}
+        footer={<TestFooter />}
+        mobileNav={<TestMobileNav />}
+      >
+        {children}
+      </DefaultTemplate>
+    </AppContainer>
   );
 }

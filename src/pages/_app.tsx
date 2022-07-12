@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import { wrapper } from '~store/store';
 import GlobalStyle from '~styles/globals';
 import { defaultTheme } from '~styles/theme/default-theme/default-theme';
-import { TPage } from '~types/page.types';
+import { TPage } from '~types/pages/Page.types';
 
 export type TApp = AppProps & {
   Component: TPage;
