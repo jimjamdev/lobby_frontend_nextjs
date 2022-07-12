@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-import dynamic from 'next/dynamic';
-import { ComponentType } from 'react';
+
+import { modalsList } from './modals.list';
 
 export type TModals = {
   current?: {
@@ -8,16 +8,6 @@ export type TModals = {
     Component?: any;
     props?: any;
   }
-};
-
-export type TModalList = {
-  gameInfo?: ComponentType<any>;
-};
-
-const modalList: TModalList = {
-  gameInfo: dynamic(
-    () => import('../../../components/organisms/modals/GameInfoModal/GameInfoModal'),
-  ),
 };
 
 const initialState = { current: {} } as TModals;
@@ -29,7 +19,7 @@ const modalSlice = createSlice({
     openModalByKey(state, action) {
       const { key, props } = action.payload;
       // @ts-ignore
-      const activeModal = modalList[key] && modalList[key];
+      const activeModal = modalsList[key] && modalsList[key];
       console.log('**action', action);
       // eslint-disable-next-line no-param-reassign
       state.current = { key, Component: activeModal, props };

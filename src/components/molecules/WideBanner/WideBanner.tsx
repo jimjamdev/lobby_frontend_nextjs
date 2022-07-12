@@ -6,6 +6,8 @@ import { Text } from '~components/atoms/Text/Text';
 // eslint-disable-next-line import/no-absolute-path
 import fakeImage from '/public/images/shooter.jpg';
 
+import { openModal } from '~utils/openModal';
+
 export function WideBanner() {
   return (
     <Flex
@@ -22,7 +24,7 @@ export function WideBanner() {
         <Text color="mono.0" lineHeight={0} marginBottom={4} textShadow={1}>
           Play games and get free points.
         </Text>
-        <Button variant="primary" size={['md', 'lg']}>
+        <Button variant="primary" size={['md', 'lg']} onClick={() => openModal('gameInfo')}>
           PLAY NOW
         </Button>
       </Flex>
