@@ -1,5 +1,5 @@
 import { DefaultLayout } from '~layouts/DefaultLayout';
-import { TPage } from '~types/page.types';
+import { TPage } from '~types/pages/Page.types';
 
 // eslint-disable-next-line react/function-component-definition
 const LeaderboardPage: TPage = () => (

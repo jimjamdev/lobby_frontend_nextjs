@@ -1,1 +1,1 @@
-export { GameInfoModal } from './GameInfoModal';
+export { };

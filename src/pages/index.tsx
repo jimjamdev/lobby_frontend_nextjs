@@ -6,10 +6,10 @@ import { WideBanner } from '~components/molecules/WideBanner';
 import { GameGrid } from '~components/organisms/GameGrid/GameGrid';
 import { DefaultLayout } from '~layouts/DefaultLayout';
 import { useGetGamesQuery } from '~store/features/cms/games';
-import { THomePage, TPage } from '~types/pages';
+import { TPage } from '~types/pages';
 
 // eslint-disable-next-line react/function-component-definition
-const Home: TPage = ({ defaultData }: THomePage) => {
+const Home: TPage = ({ defaultData }: any) => {
   console.log('defaultData', defaultData);
   const defaultGames = useGetGamesQuery({ page: 1 });
 
