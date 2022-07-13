@@ -1,6 +1,4 @@
-// eslint-disable-next-line import/no-cycle
 import { openModalByKey, resetCurrentModal } from '~store/features/modals';
-// eslint-disable-next-line import/no-cycle
 import { store } from '~store/store';
 
 export const openModal = (key: string, props?: unknown): any => {

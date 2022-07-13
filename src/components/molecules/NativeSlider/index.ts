@@ -1,0 +1,1 @@
+export { NativeSlider } from './NativeSlider';

@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 import { Container } from '~components/atoms/Container';
 import { Spacing } from '~components/atoms/Spacing';
+import { NativeSlider } from '~components/molecules/NativeSlider';
 import { WideBanner } from '~components/molecules/WideBanner';
 import { GameGrid } from '~components/organisms/GameGrid/GameGrid';
 import { DefaultLayout } from '~layouts/DefaultLayout';
@@ -28,6 +29,7 @@ const Home: TPage = ({ defaultData }: any) => {
       </Container>
 
       <WideBanner />
+      <NativeSlider />
     </>
   );
 };

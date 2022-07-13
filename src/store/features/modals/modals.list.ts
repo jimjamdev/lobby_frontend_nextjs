@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic';
 import { ComponentType } from 'react';
 
 export type TModalList = {
-  gameInfo?: ComponentType<any>;
+  gameInfo?: ComponentType<JSX.Element>;
 };
 
 export const modalsList: TModalList = {
