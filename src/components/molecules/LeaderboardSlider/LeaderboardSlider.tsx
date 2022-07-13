@@ -3,7 +3,7 @@ import { Container } from '~components/atoms/Container';
 import { Flex } from '~components/atoms/Flex';
 import { GridView } from '~components/molecules/GridView';
 
-export function NativeSlider() {
+export function LeaderboardSlider() {
   return (
     <Box position="relative" mb={3} mt={3}>
       <Container>

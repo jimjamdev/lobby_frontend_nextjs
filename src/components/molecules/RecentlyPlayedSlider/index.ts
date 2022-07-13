@@ -1,0 +1,1 @@
+export { RecentlyPlayedSlider } from './RecentlyPlayedSlider';
