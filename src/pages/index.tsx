@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { Container } from '~components/atoms/Container';
 import { Spacing } from '~components/atoms/Spacing';
 import { GameGrid } from '~components/organisms/GameGrid/GameGrid';
+import { LatestGames } from '~components/organisms/LatestGames';
 import { LeaderboardSlider } from '~components/organisms/LeaderboardSlider';
 import { RecentlyPlayedSlider } from '~components/organisms/RecentlyPlayedSlider';
 import { VideoScroller } from '~components/organisms/VideoScroller';
@@ -27,6 +28,8 @@ const Home: TPage = ({ defaultData }: any) => {
       <RecentlyPlayedSlider />
 
       <WideBanner />
+
+      <LatestGames />
 
       <Container as="section">
         <Spacing mt={3} mb={3}>
