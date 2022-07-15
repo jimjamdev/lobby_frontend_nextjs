@@ -2,10 +2,11 @@ import Head from 'next/head';
 
 import { Container } from '~components/atoms/Container';
 import { Spacing } from '~components/atoms/Spacing';
-import { LeaderboardSlider } from '~components/molecules/LeaderboardSlider';
-import { RecentlyPlayedSlider } from '~components/molecules/RecentlyPlayedSlider';
-import { WideBanner } from '~components/molecules/WideBanner';
 import { GameGrid } from '~components/organisms/GameGrid/GameGrid';
+import { LeaderboardSlider } from '~components/organisms/LeaderboardSlider';
+import { RecentlyPlayedSlider } from '~components/organisms/RecentlyPlayedSlider';
+import { VideoScroller } from '~components/organisms/VideoScroller';
+import { WideBanner } from '~components/organisms/WideBanner';
 import { DefaultLayout } from '~layouts/DefaultLayout';
 import { useGetGamesQuery } from '~store/features/cms/games';
 import { TPage } from '~types/pages';
@@ -25,13 +26,16 @@ const Home: TPage = ({ defaultData }: any) => {
 
       <RecentlyPlayedSlider />
 
+      <WideBanner />
+
       <Container as="section">
         <Spacing mt={3} mb={3}>
           <GameGrid defaultGames={defaultGames} />
         </Spacing>
       </Container>
 
-      <WideBanner />
+      <VideoScroller />
+
       <LeaderboardSlider />
     </>
   );
