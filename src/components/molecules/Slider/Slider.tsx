@@ -2,12 +2,20 @@ import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 
 export function Slider({
-  children, slides = { perView: 5 }, loop = true, drag = true,
+  children, slides = { perView: 1 }, loop = true, drag = true,
 }: any) {
   const [sliderRef] = useKeenSlider({
     loop,
     drag,
     slides,
+    breakpoints: {
+      '(min-width: 400px)': {
+        slides: { perView: 3, spacing: 5 },
+      },
+      '(min-width: 1000px)': {
+        slides: { perView: 5, spacing: 10 },
+      },
+    },
   });
   return (
     <div ref={sliderRef} className="keen-slider">

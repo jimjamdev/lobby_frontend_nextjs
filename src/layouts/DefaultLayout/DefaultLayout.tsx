@@ -1,29 +1,13 @@
-import { DefaultTemplate } from '~components/templates/DefaultTemplate';
 import { AppContainer } from '~containers/AppContainer/AppContainer';
+import { TBaseComponentWithChildren } from '~types/base-component.type';
 
-import { TDefaultLayout } from './DefaultLayout.types';
-import { DefaultLayoutHeader } from './DefaultLayoutHeader';
 import { DefaultLayoutNav } from './DefaultLayoutNav';
 
-function TestFooter() {
-  return <div>Footer</div>;
-}
-
-function TestMobileNav() {
-  return <div>MobileNav</div>;
-}
-
-export function DefaultLayout({ children }: TDefaultLayout) {
+export function DefaultLayout({ children }: TBaseComponentWithChildren) {
   return (
     <AppContainer>
-      <DefaultTemplate
-        header={<DefaultLayoutHeader />}
-        topNav={<DefaultLayoutNav />}
-        footer={<TestFooter />}
-        mobileNav={<TestMobileNav />}
-      >
-        {children}
-      </DefaultTemplate>
+      <DefaultLayoutNav />
+      {children}
     </AppContainer>
   );
 }

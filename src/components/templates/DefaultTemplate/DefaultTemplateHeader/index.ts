@@ -1,1 +1,0 @@
-export { DefaultTemplateHeader } from './DefaultTemplateHeader';

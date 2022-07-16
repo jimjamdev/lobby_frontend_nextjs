@@ -6,25 +6,25 @@ export function VideoScroller() {
   return (
     <Box minHeight="20em">
       <Slider>
-        <Flex bg="mono.0" justifyContent="center" margin={1} alignItems="center" height="240px">Video 1</Flex>
-        <Flex bg="mono.0" justifyContent="center" margin={1} alignItems="center" height="240px">Video 2</Flex>
-        <Flex bg="mono.0" justifyContent="center" margin={1} alignItems="center" height="240px">Video 3</Flex>
-        <Flex bg="mono.0" justifyContent="center" margin={1} alignItems="center" height="240px">Video 4</Flex>
-        <Flex bg="mono.0" justifyContent="center" margin={1} alignItems="center" height="240px">Video 5</Flex>
-        <Flex bg="mono.0" justifyContent="center" margin={1} alignItems="center" height="240px">Video 6</Flex>
-        <Flex bg="mono.0" justifyContent="center" margin={1} alignItems="center" height="240px">Video 7</Flex>
-        <Flex bg="mono.0" justifyContent="center" margin={1} alignItems="center" height="240px">Video 8</Flex>
-        <Flex bg="mono.0" justifyContent="center" margin={1} alignItems="center" height="240px">Video 9</Flex>
-        <Flex bg="mono.0" justifyContent="center" margin={1} alignItems="center" height="240px">Video 10</Flex>
-        <Flex bg="mono.0" justifyContent="center" margin={1} alignItems="center" height="240px">Video 11</Flex>
-        <Flex bg="mono.0" justifyContent="center" margin={1} alignItems="center" height="240px">Video 12</Flex>
-        <Flex bg="mono.0" justifyContent="center" margin={1} alignItems="center" height="240px">Video 13</Flex>
-        <Flex bg="mono.0" justifyContent="center" margin={1} alignItems="center" height="240px">Video 14</Flex>
-        <Flex bg="mono.0" justifyContent="center" margin={1} alignItems="center" height="240px">Video 15</Flex>
-        <Flex bg="mono.0" justifyContent="center" margin={1} alignItems="center" height="240px">Video 16</Flex>
-        <Flex bg="mono.0" justifyContent="center" margin={1} alignItems="center" height="240px">Video 17</Flex>
-        <Flex bg="mono.0" justifyContent="center" margin={1} alignItems="center" height="240px">Video 18</Flex>
-        <Flex bg="mono.0" justifyContent="center" margin={1} alignItems="center" height="240px">Video 19</Flex>
+        <Flex bg="mono.0" justifyContent="center" alignItems="center" width="100px" height="240px">Video 1</Flex>
+        <Flex bg="mono.0" justifyContent="center" alignItems="center" width="100px" height="240px">Video 2</Flex>
+        <Flex bg="mono.0" justifyContent="center" alignItems="center" width="100px" height="240px">Video 3</Flex>
+        <Flex bg="mono.0" justifyContent="center" alignItems="center" width="100px" height="240px">Video 4</Flex>
+        <Flex bg="mono.0" justifyContent="center" alignItems="center" width="100px" height="240px">Video 5</Flex>
+        <Flex bg="mono.0" justifyContent="center" alignItems="center" width="100px" height="240px">Video 6</Flex>
+        <Flex bg="mono.0" justifyContent="center" alignItems="center" width="100px" height="240px">Video 7</Flex>
+        <Flex bg="mono.0" justifyContent="center" alignItems="center" width="100px" height="240px">Video 8</Flex>
+        <Flex bg="mono.0" justifyContent="center" alignItems="center" width="100px" height="240px">Video 9</Flex>
+        <Flex bg="mono.0" justifyContent="center" alignItems="center" width="100px" height="240px">Video 10</Flex>
+        <Flex bg="mono.0" justifyContent="center" alignItems="center" width="100px" height="240px">Video 11</Flex>
+        <Flex bg="mono.0" justifyContent="center" alignItems="center" width="100px" height="240px">Video 12</Flex>
+        <Flex bg="mono.0" justifyContent="center" alignItems="center" width="100px" height="240px">Video 13</Flex>
+        <Flex bg="mono.0" justifyContent="center" alignItems="center" width="100px" height="240px">Video 14</Flex>
+        <Flex bg="mono.0" justifyContent="center" alignItems="center" width="100px" height="240px">Video 15</Flex>
+        <Flex bg="mono.0" justifyContent="center" alignItems="center" width="100px" height="240px">Video 16</Flex>
+        <Flex bg="mono.0" justifyContent="center" alignItems="center" width="100px" height="240px">Video 17</Flex>
+        <Flex bg="mono.0" justifyContent="center" alignItems="center" width="100px" height="240px">Video 18</Flex>
+        <Flex bg="mono.0" justifyContent="center" alignItems="center" width="100px" height="240px">Video 19</Flex>
       </Slider>
     </Box>
   );

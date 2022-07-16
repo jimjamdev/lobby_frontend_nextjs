@@ -15,7 +15,9 @@ export function DefaultLayoutNav() {
       className="top-menu"
       display={['none', 'block']}
       height="2.8em"
-      position="relative"
+      position="sticky"
+      top={0}
+      zIndex={100}
     >
       <Container>
         <Flex

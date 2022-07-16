@@ -1,1 +1,0 @@
-export { DefaultTemplateContainer } from './DefaultTemplateContainer';

@@ -1,4 +1,4 @@
-import { ReactChild } from 'react';
+import { ReactElement } from 'react';
 
 export type TBaseComponent = {
   className?: string;
@@ -6,5 +6,5 @@ export type TBaseComponent = {
 };
 
 export type TBaseComponentWithChildren = TBaseComponent & {
-  children?: ReactChild | ReactChild[] | string | string[];
+  children: ReactElement | any;
 };

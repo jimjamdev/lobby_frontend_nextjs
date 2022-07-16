@@ -1,1 +1,0 @@
-export { DefaultTemplateMobileNav } from './DefaultTemplateMobileNav';
