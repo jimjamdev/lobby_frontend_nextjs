@@ -1,9 +1,13 @@
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
+import { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 
 export function Slider({
   children, slides = { perView: 1 }, loop = true, drag = true,
 }: any) {
+  const themeContext = useContext(ThemeContext);
+  console.log('**themeContext', themeContext);
   const [sliderRef] = useKeenSlider({
     loop,
     drag,
