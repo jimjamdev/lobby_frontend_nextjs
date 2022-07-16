@@ -3,7 +3,7 @@ import { Flex } from '~components/atoms/Flex';
 
 export function GameGridTags() {
   return (
-    <Box>
+    <Box overflow="hidden">
       <Flex alignItems="center" justifyContent="center" mt={2} mb={2}>
         <Flex bg="magenta" color="white" padding={2} borderRadius="full" ml={1} mr={1}>Racing</Flex>
         <Flex bg="lightseagreen" color="white" padding={2} borderRadius="full" ml={1} mr={1}>Puzzle</Flex>

@@ -1,3 +1,5 @@
 import qs from 'qs';
 
-export const formatQueryString = (params: unknown) => qs.stringify(params);
+export function formatQueryString(params: unknown) {
+  return qs.stringify(params);
+}

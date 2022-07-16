@@ -1,0 +1,1 @@
+export { GameItemImage } from './GameItemmage';

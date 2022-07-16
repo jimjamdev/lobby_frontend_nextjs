@@ -7,8 +7,9 @@ export const Container = styled.div<TContainer>(compose(space, layout));
 
 Container.defaultProps = {
   display: 'block',
+  width: '100%',
   maxWidth: '60em',
   margin: '0 auto',
-  pl: [2, 3],
-  pr: [2, 3],
+  pl: [3, 4],
+  pr: [3, 4],
 };

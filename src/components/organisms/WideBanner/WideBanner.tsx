@@ -10,24 +10,26 @@ import { openModal } from '~utils/openModal';
 
 export function WideBanner() {
   return (
-    <Flex
-      alignItems="center"
-      justifyContent="center"
-      bg="mono.1"
-      position="relative"
-    >
-      <Flex zIndex={1} height={['15em', '25em']} flexDirection="column" justifyContent="center" alignItems="center">
-        <Text as="h3" color="mono.0" margin={0} fontSize={[2, 6]} textShadow={1}>
-          CLAIM FREE POINTS
-        </Text>
-        <Text color="mono.0" lineHeight={0} marginBottom={4} textShadow={1}>
-          Play games and get free points.
-        </Text>
-        <Button variant="primary" size={['md', 'lg']} onClick={() => openModal('gameInfo', { gameId: 1 })}>
-          PLAY NOW
-        </Button>
+    <div>
+      <Flex
+        alignItems="center"
+        justifyContent="center"
+        bg="mono.1"
+        position="relative"
+      >
+        <Flex zIndex={1} height={['15em', '25em']} flexDirection="column" justifyContent="center" alignItems="center">
+          <Text as="h3" color="mono.0" margin={0} fontSize={[2, 6]} textShadow={1}>
+            CLAIM FREE POINTS
+          </Text>
+          <Text color="mono.0" lineHeight={0} marginBottom={4} textShadow={1}>
+            Play games and get free points.
+          </Text>
+          <Button variant="primary" size={['md', 'lg']} onClick={() => openModal('gameInfo', { gameId: 1 })}>
+            PLAY NOW
+          </Button>
+        </Flex>
+        <Image src={fakeImage} alt="some fake image" layout="fill" objectFit="cover" priority />
       </Flex>
-      <Image src={fakeImage} alt="some fake image" layout="fill" objectFit="cover" priority />
-    </Flex>
+    </div>
   );
 }

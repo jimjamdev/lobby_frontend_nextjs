@@ -1,18 +1,18 @@
-import { Box } from '~components/atoms/Box';
-import { Container } from '~components/atoms/Container';
 import { Flex } from '~components/atoms/Flex';
-import { GridView } from '~components/molecules/GridView';
+import { Slider } from '~components/molecules/Slider';
 
 export function LeaderboardSlider() {
   return (
-    <Box position="relative" mb={3} mt={3}>
-      <Container>
-        <GridView gridGap={3} columns={3} height="18em">
-          <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="200px">Leaderboard</Flex>
-          <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="200px">Leaderboard</Flex>
-          <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="200px">Leaderboard</Flex>
-        </GridView>
-      </Container>
-    </Box>
+    <Slider>
+      <Flex bg="mono.0" alignItems="center" justifyContent="center" width="200px" minHeight="200px">Leaderboard</Flex>
+      <Flex bg="mono.0" alignItems="center" justifyContent="center" width="200px" minHeight="200px">Leaderboard</Flex>
+      <Flex bg="mono.0" alignItems="center" justifyContent="center" width="200px" minHeight="200px">Leaderboard</Flex>
+      <Flex bg="mono.0" alignItems="center" justifyContent="center" width="200px" minHeight="200px">Leaderboard</Flex>
+      <Flex bg="mono.0" alignItems="center" justifyContent="center" width="200px" minHeight="200px">Leaderboard</Flex>
+      <Flex bg="mono.0" alignItems="center" justifyContent="center" width="200px" minHeight="200px">Leaderboard</Flex>
+      <Flex bg="mono.0" alignItems="center" justifyContent="center" width="200px" minHeight="200px">Leaderboard</Flex>
+      <Flex bg="mono.0" alignItems="center" justifyContent="center" width="200px" minHeight="200px">Leaderboard</Flex>
+      <Flex bg="mono.0" alignItems="center" justifyContent="center" width="200px" minHeight="200px">Leaderboard</Flex>
+    </Slider>
   );
 }
