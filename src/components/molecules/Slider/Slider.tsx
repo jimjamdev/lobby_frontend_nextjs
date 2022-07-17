@@ -4,27 +4,21 @@ import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 
 export function Slider({
-  children, slides = { perView: 1 }, loop = true, drag = true,
+  children, slides = { perView: 'auto', spacing: 10 }, loop = true, drag = true, mode = 'snap', breakpoints = {},
 }: any) {
   const themeContext = useContext(ThemeContext);
   console.log('**themeContext', themeContext);
   const [sliderRef] = useKeenSlider({
     loop,
+    mode,
     drag,
     slides,
-    breakpoints: {
-      '(min-width: 400px)': {
-        slides: { perView: 3, spacing: 5 },
-      },
-      '(min-width: 1000px)': {
-        slides: { perView: 5, spacing: 10 },
-      },
-    },
+    breakpoints,
   });
   return (
-    <div ref={sliderRef} className="keen-slider">
+    <div ref={sliderRef} className="keen-slider" style={{ maxWidth: '100%' }}>
       {/* eslint-disable-next-line react/no-array-index-key */}
-      {children.map((node: JSX.Element, index: number) => <div key={index} className="keen-slider__slide">{node}</div>)}
+      {children.map((node: JSX.Element, index: number) => <div key={index} className="keen-slider__slide" style={{ maxWidth: '150px', minWidth: '150px' }}>{node}</div>)}
     </div>
   );
 }
