@@ -24,8 +24,8 @@ export function DefaultLayoutNav() {
           as="ul"
           display="flex"
           alignItems="center"
-          borderBottomLeftRadius="md"
-          borderBottomRightRadius="md"
+          borderBottomLeftRadius={4}
+          borderBottomRightRadius={4}
           maxWidth="60em"
           bg="primary.6"
           height="2.8em"

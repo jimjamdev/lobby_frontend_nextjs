@@ -1,9 +1,11 @@
+import { Box } from '~components/atoms/Box';
+
 import { GameItemImage } from './GameItemImage';
 
 export function GameItem() {
   return (
-    <div>
+    <Box borderRadius={4} overflow="hidden">
       <GameItemImage />
-    </div>
+    </Box>
   );
 }

@@ -1,13 +1,13 @@
 export function radiiTheme() {
   return {
-    none: 0,
-    xxs: '0.1em',
-    xs: '0.25em',
-    sm: '0.5em',
-    md: '1em',
-    lg: '2em',
-    xl: '3em',
-    xxl: '4em',
-    full: '500em',
+    0: 0,
+    1: '0.1em',
+    2: '0.25em',
+    3: '0.5em',
+    4: '1em',
+    5: '2em',
+    6: '3em',
+    7: '4em',
+    8: '500em',
   };
 }
