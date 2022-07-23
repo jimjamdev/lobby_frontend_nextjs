@@ -7,6 +7,7 @@ import { cmsApi } from '~store/features/cms';
 import { gamesApi } from '~store/features/cms/games';
 import modalsSlice from '~store/features/modals/modals.slice';
 
+// eslint-disable-next-line import/no-mutable-exports
 let store: ReturnType<typeof configStore>;
 
 const configStore = () => configureStore({

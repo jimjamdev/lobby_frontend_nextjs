@@ -14,6 +14,7 @@ export const cmsApi = createApi({
     baseUrl: config.cmsApiUrl,
     prepareHeaders: (headers) => prepareCmsHeaders(headers),
   }) as BaseQueryFn<string | FetchArgs, unknown, TError>,
+  // eslint-disable-next-line consistent-return
   extractRehydrationInfo(action, { reducerPath }) {
     if (action.type === HYDRATE) {
       return action.payload[reducerPath];

@@ -5,7 +5,7 @@ export function gamesTransform(response?: TGamesResponse): TGames {
     ...game,
   }));
   return {
-    error: undefined,
+    error: null,
     data: games,
     meta: response?.meta,
   };

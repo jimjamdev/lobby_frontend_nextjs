@@ -4,17 +4,17 @@ import { modalsList } from './modals.list';
 
 export type TModals = {
   current?: {
-    key?: string;
-    Component?: any;
-    props?: any;
+    key?: string | null;
+    Component?: any | null;
+    props?: any | null;
   };
 };
 
 const initialState: TModals = {
   current: {
-    key: undefined,
-    Component: undefined,
-    props: undefined,
+    key: null,
+    Component: null,
+    props: null,
   },
 };
 

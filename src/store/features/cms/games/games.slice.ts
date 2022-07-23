@@ -28,4 +28,5 @@ export const gamesApi = cmsApi.injectEndpoints({
   }),
 });
 
+export const { getGames } = gamesApi.endpoints;
 export const { useGetGamesQuery } = gamesApi;

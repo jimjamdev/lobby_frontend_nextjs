@@ -1,3 +1,4 @@
+import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 
 import { GameGrid } from '~components/organisms/GameGrid/GameGrid';
@@ -7,12 +8,12 @@ import { RecentlyPlayedSlider } from '~components/organisms/RecentlyPlayedSlider
 import { VideoScroller } from '~components/organisms/VideoScroller';
 import { WideBanner } from '~components/organisms/WideBanner';
 import { DefaultLayout } from '~layouts/DefaultLayout';
-import { useGetGamesQuery } from '~store/features/cms/games';
+import { getGames, useGetGamesQuery } from '~store/features/cms/games';
+import { wrapper } from '~store/store';
 import { TPage } from '~types/pages';
 
 // eslint-disable-next-line react/function-component-definition
-const Home: TPage = ({ defaultData }: any) => {
-  console.log('defaultData', defaultData);
+const Home: TPage = () => {
   const defaultGames = useGetGamesQuery({ page: 1 });
 
   return (
@@ -42,6 +43,16 @@ const Home: TPage = ({ defaultData }: any) => {
 Home.getLayout = function getLayout(page) {
   return <DefaultLayout>{page}</DefaultLayout>;
 };
+
+export const getServerSideProps = wrapper.getServerSideProps(
+  (store) => async () => {
+    await store.dispatch(getGames.initiate({ page: 1 }));
+
+    return {
+      props: { },
+    };
+  },
+);
 /*
 export async function getServerSideProps() {
   const { data: games } = await store.dispatch(getGames.initiate({ page: 1 }));

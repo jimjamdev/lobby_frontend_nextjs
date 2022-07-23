@@ -7,7 +7,7 @@ export type TGames = {
   data?: Array<TGame>;
   meta?: TMeta;
   isLoading?: boolean;
-  error?: SerializedError
+  error?: SerializedError | null
 };
 
 export type TGame = TDefaultRecord & {
