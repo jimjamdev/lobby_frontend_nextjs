@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import 'styles/app.css';
 
 import { wrapper } from '~store/store';
 import GlobalStyle from '~styles/globals';
