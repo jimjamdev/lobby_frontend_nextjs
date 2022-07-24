@@ -1,4 +1,5 @@
 import { Flex } from '~components/atoms/Flex';
+import { Text } from '~components/atoms/Text';
 import { Title } from '~components/atoms/Title';
 import { Slider } from '~components/molecules/Slider';
 
@@ -6,6 +7,7 @@ export function VideoScroller() {
   return (
     <Flex bg="mono.1" flexDirection="column" alignItems="center" pb={4}>
       <Title>Videos</Title>
+      <Text>See what other players are doing</Text>
       <Slider>
         <Flex bg="mono.0" justifyContent="center" alignItems="center" width="150px" height="240px">Video 1</Flex>
         <Flex bg="mono.0" justifyContent="center" alignItems="center" width="150px" height="240px">Video 2</Flex>
