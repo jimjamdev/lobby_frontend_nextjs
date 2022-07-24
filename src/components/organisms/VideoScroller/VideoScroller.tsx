@@ -3,6 +3,7 @@ import { Text } from '~components/atoms/Text';
 import { Title } from '~components/atoms/Title';
 import { Video } from '~components/atoms/Video';
 import { Slider } from '~components/molecules/Slider';
+import { config } from '~config/index';
 import { handleError } from '~utils/handleError';
 
 export function VideoScroller({ videos }: any) {
@@ -24,7 +25,7 @@ export function VideoScroller({ videos }: any) {
             width="150px"
             height="240px"
           >
-            <Video url={`http://localhost:1337${video?.video?.url}`} autoPlay playsInline type={video?.video?.mime} />
+            <Video src={`${config?.uploadsUrl}${video?.video?.url}`} autoPlay playsInline type={video?.video?.mime} />
           </Flex>
         ))}
       </Slider>

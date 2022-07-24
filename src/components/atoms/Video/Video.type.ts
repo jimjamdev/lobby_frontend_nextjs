@@ -1,5 +1,5 @@
 export type TVideo = {
-  url: string;
+  src: string;
   className?: string;
   loop?: boolean;
   autoPlay?: boolean;

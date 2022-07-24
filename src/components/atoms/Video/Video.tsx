@@ -1,9 +1,9 @@
-import React, { FC } from 'react';
+import React from 'react';
 
 import { TVideo } from './Video.type';
 
-export const Video: FC<TVideo> = ({
-  url,
+export function Video({
+  src,
   className,
   loop,
   autoPlay,
@@ -14,19 +14,20 @@ export const Video: FC<TVideo> = ({
   width,
   height,
   onClick,
-}) => (
-  // eslint-disable-next-line jsx-a11y/media-has-caption
-  <video
-    loop={loop}
-    autoPlay={autoPlay}
-    muted={muted}
-    playsInline={playsInline}
-    controls={controls}
-    width={width}
-    height={height}
-    onClick={onClick}
-    className={className}
-  >
-    <source src={url} type={type} />
-  </video>
-);
+}: TVideo) {
+  return (
+    <video
+      loop={loop}
+      autoPlay={autoPlay}
+      muted={muted}
+      playsInline={playsInline}
+      controls={controls}
+      width={width}
+      height={height}
+      onClick={onClick}
+      className={className}
+    >
+      <source src={src} type={type} />
+    </video>
+  );
+}
