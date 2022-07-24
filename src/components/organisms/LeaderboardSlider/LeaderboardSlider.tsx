@@ -6,8 +6,8 @@ import { Slider } from '~components/molecules/Slider';
 export function LeaderboardSlider() {
   return (
     <Flex flexDirection="column" alignItems="center" bg="mono.2" pb={4}>
-      <Title>Leaderboard Slider</Title>
-      <Text>Global ranking for games</Text>
+      <Title textAlign="center">Leaderboard Slider</Title>
+      <Text textAlign="center">Global ranking for games</Text>
       <Slider>
         <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="200px">Leaderboard 1</Flex>
         <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="200px">Leaderboard 2</Flex>

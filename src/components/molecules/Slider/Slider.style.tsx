@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 export const SliderContainer = styled.div`
-  display: flex;
-  max-width: 100vw;
-  overflow-y: hidden;
+  max-width: 100%;
+`;
+
+export const SliderItem = styled.div`
+  max-width: 150px;
+  min-width: 150px;
 `;
