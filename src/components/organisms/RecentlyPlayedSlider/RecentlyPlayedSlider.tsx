@@ -15,6 +15,10 @@ export function RecentlyPlayedSlider() {
           <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="70px">Game</Flex>
           <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="70px">Game</Flex>
           <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="70px">Game</Flex>
+          <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="70px">Game</Flex>
+          <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="70px">Game</Flex>
+          <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="70px">Game</Flex>
+          <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="70px">Game</Flex>
         </Slider>
       </Flex>
     </Container>
