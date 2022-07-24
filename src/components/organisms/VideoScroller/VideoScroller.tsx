@@ -24,7 +24,7 @@ export function VideoScroller({ videos }: any) {
             width="150px"
             height="240px"
           >
-            <Video src={`${config?.uploadsUrl}${video?.video?.url}`} autoPlay type={video?.video?.mime} />
+            <Video src={`${config?.uploadsUrl}${video?.video?.url}`} autoPlay muted loop type={video?.video?.mime} />
           </Flex>
         ))}
       </Slider>
