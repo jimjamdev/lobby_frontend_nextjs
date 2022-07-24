@@ -1,5 +1,3 @@
-export function Title() {
-  return (
-    <h1>Title</h1>
-  );
-}
+import styled from 'styled-components';
+
+export const Title = styled.h1``;

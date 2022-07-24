@@ -1,10 +1,12 @@
 import { Box } from '~components/atoms/Box';
 import { Flex } from '~components/atoms/Flex';
+import { Title } from '~components/atoms/Title';
 import { Slider } from '~components/molecules/Slider';
 
 export function VideoScroller() {
   return (
     <Box minHeight="20em">
+      <Title>Videos</Title>
       <Slider>
         <Flex bg="mono.0" justifyContent="center" alignItems="center" width="150px" height="240px">Video 1</Flex>
         <Flex bg="mono.0" justifyContent="center" alignItems="center" width="150px" height="240px">Video 2</Flex>

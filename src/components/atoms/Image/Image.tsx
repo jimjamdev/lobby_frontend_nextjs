@@ -1,10 +1,8 @@
 // eslint-disable-next-line import/no-named-default
 import NextImage from 'next/image';
+import styled from 'styled-components';
+import { border, compose } from 'styled-system';
 
 import { TImage } from './Image.types';
 
-export function Image({ children, ...props }: TImage) {
-  return (
-    <NextImage {...props}>{children}</NextImage>
-  );
-}
+export const Image = styled(NextImage)<TImage>(compose(border));

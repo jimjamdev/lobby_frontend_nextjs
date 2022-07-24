@@ -4,5 +4,5 @@ import { Image } from '~components/atoms/Image';
 import fakeImage from '/public/images/game.webp';
 
 export function GameItemImage() {
-  return <Image src={fakeImage} alt="game image" />;
+  return <Image src={fakeImage} alt="game image" borderRadius={4} />;
 }
