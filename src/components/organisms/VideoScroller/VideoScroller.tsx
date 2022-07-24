@@ -4,7 +4,7 @@ import { Slider } from '~components/molecules/Slider';
 
 export function VideoScroller() {
   return (
-    <Flex flexDirection="column" alignItems="center" minHeight="20em">
+    <Flex bg="mono.1" flexDirection="column" alignItems="center" pb={4}>
       <Title>Videos</Title>
       <Slider>
         <Flex bg="mono.0" justifyContent="center" alignItems="center" width="150px" height="240px">Video 1</Flex>
