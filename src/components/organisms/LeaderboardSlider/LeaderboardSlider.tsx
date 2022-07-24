@@ -4,7 +4,7 @@ import { Slider } from '~components/molecules/Slider';
 
 export function LeaderboardSlider() {
   return (
-    <>
+    <Flex flexDirection="column" alignItems="center">
       <Title>Leaderboard Slider</Title>
       <Slider>
         <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="200px">Leaderboard 1</Flex>
@@ -17,6 +17,6 @@ export function LeaderboardSlider() {
         <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="200px">Leaderboard 8</Flex>
         <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="200px">Leaderboard 9</Flex>
       </Slider>
-    </>
+    </Flex>
   );
 }

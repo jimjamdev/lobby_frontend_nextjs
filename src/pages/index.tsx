@@ -13,7 +13,7 @@ import { TPage } from '~types/pages';
 
 // eslint-disable-next-line react/function-component-definition
 const Home: TPage = () => {
-  const defaultGames = useGetGamesQuery({ page: 1 });
+  const games = useGetGamesQuery({ page: 1 });
 
   return (
     <>
@@ -30,7 +30,7 @@ const Home: TPage = () => {
 
       <LatestGames />
 
-      <GameGrid defaultGames={defaultGames} />
+      <GameGrid games={games} />
 
       <VideoScroller />
 

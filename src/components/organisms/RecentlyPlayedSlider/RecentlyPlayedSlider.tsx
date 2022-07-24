@@ -6,13 +6,15 @@ import { Slider } from '~components/molecules/Slider';
 export function RecentlyPlayedSlider() {
   return (
     <Container>
-      <Title>Most popular</Title>
-      <Slider>
-        <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="70px">Game</Flex>
-        <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="70px">Game</Flex>
-        <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="70px">Game</Flex>
-        <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="70px">Game</Flex>
-      </Slider>
+      <Flex flexDirection="column" alignItems="center">
+        <Title>Most popular</Title>
+        <Slider>
+          <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="70px">Game</Flex>
+          <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="70px">Game</Flex>
+          <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="70px">Game</Flex>
+          <Flex bg="mono.0" alignItems="center" justifyContent="center" minHeight="70px">Game</Flex>
+        </Slider>
+      </Flex>
     </Container>
   );
 }
