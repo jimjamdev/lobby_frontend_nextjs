@@ -14,7 +14,6 @@ import { TPage } from '~types/pages';
 // eslint-disable-next-line react/function-component-definition
 const Home: TPage = () => {
   const games = useGetGamesQuery({ page: 1 });
-
   return (
     <>
       <Head>

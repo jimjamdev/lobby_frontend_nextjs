@@ -4,9 +4,7 @@ import { TMeta } from '~types/data';
 import { TDefaultRecord } from '~types/data/common';
 
 export type TGames = {
-  data?: {
-    data?: Array<TGame>;
-  },
+  data?: TGame[]
   meta?: TMeta;
   isLoading?: boolean;
   error?: SerializedError | null
