@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     height: 100%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: white;
   }
   body {
     overflow-x: hidden;

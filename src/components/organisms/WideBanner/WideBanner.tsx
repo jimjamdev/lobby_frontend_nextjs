@@ -17,7 +17,7 @@ export function WideBanner() {
         bg="mono.1"
         position="relative"
       >
-        <Flex zIndex={1} height={['15em', '25em', '30em']} flexDirection="column" justifyContent="center" alignItems="center">
+        <Flex zIndex={1} height={['15em', '25em', '30em', '35rem']} flexDirection="column" justifyContent="center" alignItems="center">
           <Text as="h3" color="mono.0" margin={0} fontSize={[2, 6]} textShadow={1}>
             CLAIM FREE POINTS
           </Text>
