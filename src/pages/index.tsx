@@ -1,4 +1,3 @@
-import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 
 import { GameGrid } from '~components/organisms/GameGrid/GameGrid';
@@ -45,7 +44,8 @@ Home.getLayout = function getLayout(page) {
 };
 
 export const getServerSideProps = wrapper.getServerSideProps(
-  (store) => async () => {
+  (store) => async ({ query }) => {
+    console.log('query', query);
     await store.dispatch(getGames.initiate({ page: 1 }));
     return {
       props: {},
