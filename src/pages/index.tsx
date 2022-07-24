@@ -8,12 +8,14 @@ import { VideoScroller } from '~components/organisms/VideoScroller';
 import { WideBanner } from '~components/organisms/WideBanner';
 import { DefaultLayout } from '~layouts/DefaultLayout';
 import { getGames, useGetGamesQuery } from '~store/features/cms/games';
+import { getVideos, useGetVideosQuery } from '~store/features/cms/videos';
 import { wrapper } from '~store/store';
 import { TPage } from '~types/pages';
 
 // eslint-disable-next-line react/function-component-definition
 const Home: TPage = () => {
   const games = useGetGamesQuery({ page: 1 });
+  const videos = useGetVideosQuery({ });
   return (
     <>
       <Head>
@@ -31,7 +33,7 @@ const Home: TPage = () => {
 
       <GameGrid games={games} />
 
-      <VideoScroller />
+      <VideoScroller videos={videos} />
 
       <LeaderboardSlider />
     </>
@@ -46,6 +48,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
   (store) => async ({ query }) => {
     console.log('query', query);
     await store.dispatch(getGames.initiate({ page: 1 }));
+    await store.dispatch(getVideos.initiate({}));
     return {
       props: {},
     };
