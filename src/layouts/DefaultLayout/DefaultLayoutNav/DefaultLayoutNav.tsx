@@ -11,6 +11,7 @@ export function DefaultLayoutNav() {
 
   return (
     <Box
+      as="nav"
       id="top-menu"
       className="top-menu"
       display={['none', 'block']}

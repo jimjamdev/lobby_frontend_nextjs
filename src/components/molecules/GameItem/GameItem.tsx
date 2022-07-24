@@ -4,7 +4,7 @@ import { GameItemImage } from './GameItemImage';
 
 export function GameItem() {
   return (
-    <Box borderRadius={4} position="relative" overflow="hidden" width="200px" height="100%">
+    <Box borderRadius={4} position="relative" overflow="hidden" width="100%" height="100%">
       <GameItemImage />
     </Box>
   );

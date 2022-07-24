@@ -15,7 +15,7 @@ export function GameGrid({ games }: TGameGrid) {
       <Flex flexDirection="column" alignItems="center">
         <Title>Arcade Games</Title>
         <GameGridTags />
-        <GridView columns={4} gridGap={3}>
+        <GridView columns={[2, 4, 6]} gridGap={3}>
           {error && handleError(error)}
           {isLoading && <div>Loading...</div>}
           {data?.data

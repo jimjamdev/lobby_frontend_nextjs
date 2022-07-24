@@ -6,7 +6,7 @@ import { Slider } from '~components/molecules/Slider';
 
 export function RecentlyPlayedSlider() {
   return (
-    <Container>
+    <Container as="section">
       <Flex flexDirection="column" alignItems="center">
         <Title>Most popular</Title>
         <Text>Popular games from our users</Text>
