@@ -10,7 +10,6 @@ export function VideoScroller({ videos }: any) {
   const { data, isLoading, error } = videos;
   if (isLoading) return <div>Loading...</div>;
   if (error) return handleError(error);
-  console.log('videos', data);
   return (
     <Flex bg="mono.1" flexDirection="column" alignItems="center" pb={4}>
       <Title>Videos</Title>
@@ -25,7 +24,7 @@ export function VideoScroller({ videos }: any) {
             width="150px"
             height="240px"
           >
-            <Video src={`${config?.uploadsUrl}${video?.video?.url}`} autoPlay playsInline type={video?.video?.mime} />
+            <Video src={`${config?.uploadsUrl}${video?.video?.url}`} autoPlay type={video?.video?.mime} />
           </Flex>
         ))}
       </Slider>
