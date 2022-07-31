@@ -21,11 +21,10 @@ const modalSlice = createSlice({
   initialState,
   reducers: {
     openPortalByKey(state, action) {
-      console.log('**openPortalByKey', action?.payload);
       const { key, props } = action.payload;
       // @ts-ignore
       const activePortal = modalsList[key] && modalsList[key];
-      console.log('**activePortal', activePortal);
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       state.portals?.findIndex((item) => item.key === key) === -1
         ? state.portals?.push({ key, component: activePortal, props: { key, ...props } })
         : state.portals;
