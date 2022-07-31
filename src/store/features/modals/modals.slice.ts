@@ -24,9 +24,9 @@ const modalSlice = createSlice({
       console.log('**openPortalByKey', action?.payload);
       const { key, props } = action.payload;
       // @ts-ignore
-      const activePortal = (modalsList[key] && modalsList[key]);
+      const activePortal = modalsList[key] && modalsList[key];
       console.log('**activePortal', activePortal);
-      state.portals?.push({ key, component: activePortal, props: { key, ...props } });
+      state.portals?.push({ key, component: activePortal, props });
     },
     closePortalByKey(state, action) {
       const { key } = action.payload as TPortal;

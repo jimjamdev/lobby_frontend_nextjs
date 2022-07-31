@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import { Button } from '~components/atoms/Button';
 import { Flex } from '~components/atoms/Flex';
 import { Image } from '~components/atoms/Image';
@@ -9,7 +11,15 @@ import fakeImage from '/public/images/shooter.jpg';
 import { usePortal } from '~hooks/usePortal';
 
 export function WideBanner() {
-  const { openPortal } = usePortal();
+  const { openPortal, closePortal } = usePortal();
+
+  useEffect(() => {
+    openPortal('auth', { isLoggedIn: false });
+    return () => {
+      closePortal('auth');
+    };
+  }, [openPortal, closePortal]);
+
   return (
     <div>
       <Flex
@@ -19,7 +29,7 @@ export function WideBanner() {
         position="relative"
       >
         <Flex zIndex={1} height={['15em', '25em', '30em', '35rem']} flexDirection="column" justifyContent="center" alignItems="center">
-          <Text as="h3" color="mono.0" margin={0} fontSize={[2, 6]} textShadow={1} onClick={() => openPortal('auth', { isLoggedIn: false })}>
+          <Text as="h3" color="mono.0" margin={0} fontSize={[2, 6]} textShadow={1}>
             CLAIM FREE POINTS
           </Text>
           <Text color="mono.0" lineHeight={0} marginBottom={4} textShadow={1}>
