@@ -19,7 +19,7 @@ export function WideBanner() {
         position="relative"
       >
         <Flex zIndex={1} height={['15em', '25em', '30em', '35rem']} flexDirection="column" justifyContent="center" alignItems="center">
-          <Text as="h3" color="mono.0" margin={0} fontSize={[2, 6]} textShadow={1}>
+          <Text as="h3" color="mono.0" margin={0} fontSize={[2, 6]} textShadow={1} onClick={() => openPortal('auth', { isLoggedIn: false })}>
             CLAIM FREE POINTS
           </Text>
           <Text color="mono.0" lineHeight={0} marginBottom={4} textShadow={1}>
