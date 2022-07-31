@@ -2,14 +2,20 @@ import { useAppSelector } from '~store/store';
 import { TBaseComponentWithChildren } from '~types/base-component.type';
 
 export function LayoutContainer({ children }: TBaseComponentWithChildren) {
-  const currentModal = useAppSelector((state) => state?.modals?.current);
-  const ModalComponent = currentModal?.Component;
-  const ModalProps = currentModal?.props;
+  const { portals } = useAppSelector((state) => state?.portals);
+  console.log('**portals', portals);
+  function renderPortals() {
+    return portals && portals?.length >= 0 && portals?.map((portal) => {
+      const PortalComponent = portal?.component;
+      const PortalProps = portal?.props;
+      return <PortalComponent key={portal?.key} {...PortalProps} />;
+    });
+  }
 
   return (
     <>
       {children}
-      { ModalComponent && <ModalComponent {...ModalProps} /> }
+      { portals && renderPortals() }
     </>
   );
 }

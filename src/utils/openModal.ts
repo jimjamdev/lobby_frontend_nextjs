@@ -1,12 +1,17 @@
-import { openModalByKey, resetCurrentModal } from '~store/features/modals';
+import { openPortalByKey, closeAll } from '~store/features/modals';
 import { store } from '~store/store';
 
-export const openModal = (key: string, props?: unknown): any => {
+export const openPortal = (key: string, props?: unknown): any => {
   const { dispatch } = store;
-  return dispatch(openModalByKey({ key, props }));
+  return dispatch(openPortalByKey({ key, props }));
 };
 
-export const closeModals = (): any => {
+export const closePortal = (key: string): any => {
   const { dispatch } = store;
-  return dispatch(resetCurrentModal());
+  return dispatch(closePortal(key));
+};
+
+export const closePortals = (): any => {
+  const { dispatch } = store;
+  return dispatch(closeAll());
 };

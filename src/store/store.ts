@@ -14,7 +14,7 @@ const configStore = () => configureStore({
   reducer: {
     [cmsApi.reducerPath]: cmsApi.reducer,
     [gamesApi.reducerPath]: gamesApi.reducer,
-    modals: modalsSlice,
+    portals: modalsSlice,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware()
     .concat(cmsApi.middleware, gamesApi.middleware),

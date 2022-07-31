@@ -6,7 +6,7 @@ import { Link } from '~components/atoms/Link';
 /* We'll break this up into its own folder as it will have its own types, func etc */
 
 export type TDefaultLayoutNavItem = {
-  active: boolean;
+  active?: boolean;
 };
 
 export const DefaultLayoutNavItem = styled(Link)<TDefaultLayoutNavItem>`

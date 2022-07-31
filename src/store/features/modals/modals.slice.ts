@@ -2,37 +2,41 @@ import { createSlice } from '@reduxjs/toolkit';
 
 import { modalsList } from './modals.list';
 
-export type TModals = {
-  current?: {
-    key?: string | null;
-    Component?: any | null;
-    props?: any | null;
-  };
+export type TPortal = {
+  key?: [key: string];
+  component?: any | null;
+  props?: any | null;
 };
 
-const initialState: TModals = {
-  current: {
-    key: null,
-    Component: null,
-    props: null,
-  },
+export type TPortals = {
+  portals?: Array<TPortal> | null;
+};
+
+const initialState: TPortals = {
+  portals: null,
 };
 
 const modalSlice = createSlice({
   name: 'modal',
   initialState,
   reducers: {
-    openModalByKey(state, action) {
+    openPortalByKey(state, action) {
+      console.log('**openPortalByKey', action?.payload);
       const { key, props } = action.payload;
       // @ts-ignore
-      const activeModal = modalsList[key] && modalsList[key];
-      state.current = { key, Component: activeModal, props };
+      const activePortal = (modalsList[key] && modalsList[key]);
+      console.log('**activePortal', activePortal);
+      state.portals?.push({ key, component: activePortal, props });
     },
-    resetCurrentModal(state) {
-      state.current = initialState?.current;
+    closePortalByKey(state, action) {
+      const { key } = action.payload as TPortal;
+      state.portals = state?.portals?.filter((portal) => portal.key !== key);
+    },
+    closeAll(state) {
+      state.portals = initialState?.portals;
     },
   },
 });
 
-export const { openModalByKey, resetCurrentModal } = modalSlice.actions;
+export const { openPortalByKey, closePortalByKey, closeAll } = modalSlice.actions;
 export default modalSlice.reducer;
