@@ -13,7 +13,7 @@ export type TPortals = {
 };
 
 const initialState: TPortals = {
-  portals: null,
+  portals: [],
 };
 
 const modalSlice = createSlice({
@@ -26,7 +26,7 @@ const modalSlice = createSlice({
       // @ts-ignore
       const activePortal = (modalsList[key] && modalsList[key]);
       console.log('**activePortal', activePortal);
-      state.portals?.push({ key, component: activePortal, props });
+      state.portals?.push({ key, component: activePortal, props: { key, ...props } });
     },
     closePortalByKey(state, action) {
       const { key } = action.payload as TPortal;

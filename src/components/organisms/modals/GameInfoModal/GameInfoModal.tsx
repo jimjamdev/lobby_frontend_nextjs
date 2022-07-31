@@ -2,14 +2,15 @@ import { Box } from '~components/atoms/Box';
 import { Button } from '~components/atoms/Button';
 import { Overlay } from '~components/atoms/Overlay';
 import { Portal } from '~components/atoms/Portal';
-import { closeModals } from '~utils/openModal';
+import { usePortal } from '~hooks/usePortal';
 
 export default function GameInfoModal(data: any) {
+  const { closePortal } = usePortal();
   console.log('**modalData', data);
 
   const handleClose = () => {
     console.log('**close modal');
-    closeModals();
+    return closePortal('gameInfo');
   };
 
   return (

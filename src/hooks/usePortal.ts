@@ -14,10 +14,13 @@ export function usePortal() {
     },
     [dispatch],
   );
-  async function closePortal({ key }: TPortal) {
-    if (!key) return null;
-    return dispatch(closePortalByKey({ key }));
-  }
+  const closePortal = useCallback(
+    (key: string) => {
+      console.log('**closePortal', key);
+      return dispatch(closePortalByKey({ key }));
+    },
+    [dispatch],
+  );
   async function closeAllPortals() {
     return dispatch(closeAll());
   }
