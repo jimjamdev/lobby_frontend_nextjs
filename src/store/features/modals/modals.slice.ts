@@ -26,7 +26,9 @@ const modalSlice = createSlice({
       // @ts-ignore
       const activePortal = modalsList[key] && modalsList[key];
       console.log('**activePortal', activePortal);
-      state.portals?.push({ key, component: activePortal, props });
+      state.portals?.findIndex((item) => item.key === key) === -1
+        ? state.portals?.push({ key, component: activePortal, props: { key, ...props } })
+        : state.portals;
     },
     closePortalByKey(state, action) {
       const { key } = action.payload as TPortal;

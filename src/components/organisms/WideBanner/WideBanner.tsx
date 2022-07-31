@@ -15,9 +15,6 @@ export function WideBanner() {
 
   useEffect(() => {
     openPortal('auth', { isLoggedIn: false });
-    return () => {
-      closePortal('auth');
-    };
   }, [openPortal, closePortal]);
 
   return (
