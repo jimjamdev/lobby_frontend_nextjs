@@ -3,7 +3,6 @@ import { TBaseComponentWithChildren } from '~types/base-component.type';
 
 export function LayoutContainer({ children }: TBaseComponentWithChildren) {
   const { portals } = useAppSelector((state) => state?.portals);
-  console.log('**portals', portals);
   function renderPortals() {
     return portals && portals?.length >= 0 && portals?.map((portal) => {
       const PortalComponent = portal?.component;

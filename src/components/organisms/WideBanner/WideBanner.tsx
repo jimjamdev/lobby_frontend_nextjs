@@ -15,6 +15,11 @@ export function WideBanner() {
 
   useEffect(() => {
     openPortal('auth', { isLoggedIn: false });
+    openPortal('gameInfo', { gameId: 1 });
+    return () => {
+      closePortal('auth');
+      closePortal('gameInfo');
+    };
   }, [openPortal, closePortal]);
 
   return (
