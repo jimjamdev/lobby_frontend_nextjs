@@ -75,7 +75,7 @@ const WheelExample: TPage = () => {
       <WheelTable>
         <Wheel>
           {slices.map((slice, index) => (
-            <Slice key={slice} style={{ transform: `rotate(${360 / index})` }} />
+            <Slice key={slice} style={{ transform: `rotate(${360 / index}deg)` }} />
           ))}
         </Wheel>
       </WheelTable>
