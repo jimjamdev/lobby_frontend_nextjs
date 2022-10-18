@@ -18,10 +18,7 @@ export function GameGrid({ games }: TGameGrid) {
         <GridView columns={[2, 4, 6]} gridGap={3}>
           {error && handleError(error)}
           {isLoading && <div>Loading...</div>}
-          {data?.data
-          && data?.data?.map((game: any) => (
-            <GameItem key={game.id} />
-          ))}
+          {data?.data && data?.data?.map((game: any) => <GameItem key={game.id} />)}
         </GridView>
       </Flex>
     </Container>
