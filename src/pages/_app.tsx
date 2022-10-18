@@ -9,9 +9,7 @@ import GlobalStyle from '~styles/globals';
 import { defaultTheme } from '~styles/theme/default-theme/default-theme';
 import { TPage } from '~types/pages/Page.types';
 
-const {
-  default: fetch, Headers, Request, Response,
-} = require('node-fetch');
+const { default: fetch, Headers, Request, Response } = require('node-fetch');
 
 Object.assign(globalThis, {
   fetch,
