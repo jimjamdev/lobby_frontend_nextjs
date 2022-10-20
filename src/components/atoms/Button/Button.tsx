@@ -1,30 +1,13 @@
-import styled from 'styled-components';
-import {
-  variant, space, layout, position,
-} from 'styled-system';
+import { styled } from '~theme/config';
 
-import { TButton } from './Button.types';
+// import { TButton } from './Button.types';
 
-export const Button = styled('button')<TButton>`
-  border: 0 none;
-  outline: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
-  cursor: pointer;
-  ${(
-    variant({
-      scale: 'buttons',
-    })
-  )};
-  ${(
-    variant({
-      prop: 'size',
-      scale: 'buttonSizes',
-    })
-  )};
-  ${space};
-  ${layout};
-  ${position};
-`;
+export const Button = styled('button', {
+  border: '0 none',
+  outline: 'none',
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  verticalAlign: 'middle',
+  cursor: 'pointer',
+});

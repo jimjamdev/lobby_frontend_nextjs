@@ -16,6 +16,7 @@
     "incremental": true,
     "baseUrl": "./src",
     "paths": {
+      "~src/*": ["/*"],
       "~store/*": ["store/*"],
       "~containers/*": ["containers/*"],
       "~layouts/*": ["layouts/*"],
@@ -25,7 +26,8 @@
       "~pages/*": ["pages/*"],
       "~types/*": ["types/*"],
       "~config/*": ["config/*"],
-      "~styles/*": ["styles/*"]
+      "~styles/*": ["styles/*"],
+      "~theme/*": ["theme/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"],

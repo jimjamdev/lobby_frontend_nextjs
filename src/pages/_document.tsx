@@ -1,31 +1,33 @@
-/* eslint-disable */
-import Document, { DocumentContext, DocumentInitialProps } from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
+import NextDocument, {
+  Html, Head, Main, NextScript,
+} from 'next/document';
+import React from 'react';
 
-export default class MyDocument extends Document {
-  static async getInitialProps(
-    ctx: DocumentContext,
-  ): Promise<DocumentInitialProps> {
-    const sheet = new ServerStyleSheet();
-    const originalRenderPage = ctx.renderPage;
+import { getCssText, reset } from '~theme/config';
 
-    try {
-      ctx.renderPage = () => originalRenderPage({
-        enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
-      });
+/**
+ * Get the css and reset the internal css representation.
+ * This is very *IMPORTANT* to do as the server might handle multiple requests
+ * and we don't want to have the css accumulated from previous requests
+ */
+const getCssAndReset = () => {
+  const css = getCssText();
+  reset();
+  return css;
+};
 
-      const initialProps = await Document.getInitialProps(ctx);
-      return {
-        ...initialProps,
-        styles: [
-          <>
-            {initialProps.styles}
-            {sheet.getStyleElement()}
-          </>,
-        ],
-      };
-    } finally {
-      sheet.seal();
-    }
+export default class Document extends NextDocument {
+  render() {
+    return (
+      <Html lang="en">
+        <Head>
+          <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssAndReset() }} />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
   }
 }
